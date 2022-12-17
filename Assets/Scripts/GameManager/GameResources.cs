@@ -14,20 +14,17 @@ public class GameResources : MonoBehaviour
             {
                 instance = Resources.Load<GameResources>("GameResources");
             }
-
             return instance;
         }
     }
 
     #region Header DUNGEON
     [Space(10)]
-    [Header("Dungeon")]
+    [Header("DUNGEON")]
     #endregion
-
     #region Tooltip
     [Tooltip("Populate with the dungeon RoomNodeTypeListSO")]
     #endregion
-    //a
+
     public RoomNodeTypeListSO roomNodeTypeList;
-    
 }
