@@ -18,6 +18,8 @@ public class RoomNodeSO : ScriptableObject
 #if UNITY_EDITOR
 
     [HideInInspector] public Rect rect;
+    [HideInInspector] public bool isLeftClickDragging = false;
+    [HideInInspector] public bool isSelected = false;
 
     /// <summary>
     /// Initialise node
@@ -75,6 +77,92 @@ public class RoomNodeSO : ScriptableObject
         }
 
         return roomArray;
+    }
+    
+    //process evetns forthe node
+    public void ProcessEvents(Event currentEvent)
+    {
+        //current event determines what type of interaction is happening. it is unity function
+        switch (currentEvent.type)
+        {
+            //process mouse down events
+            case EventType.MouseDown:
+                ProcessMouseDownEvent(currentEvent);
+                break;
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);
+                break;
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ProcessMouseDownEvent(Event currentEvent)
+    {
+        //left click down
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickDownEvent();
+        }
+    }
+
+    private void ProcessLeftClickDownEvent()
+    {
+        //selection is unity editor class
+        Selection.activeObject = this;
+        
+        //toggle node selection
+        if (isSelected==true)
+        {
+            isSelected = false;
+        }
+        else
+        {
+            isSelected = true;
+        }
+    }
+
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        //if left click is up
+        if (currentEvent.button==0)
+        {
+            ProcessLeftClickUpEvent();
+        }
+    }
+
+    private void ProcessLeftClickUpEvent()
+    {
+        if (isLeftClickDragging)
+        {
+            isLeftClickDragging = false;
+        }
+    }
+
+    private void ProcessMouseDragEvent(Event currentEvent)
+    {
+        //process left click drag event
+        if (currentEvent.button==0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent);
+        }
+    }
+
+    private void ProcessLeftMouseDragEvent(Event currentEvent)
+    {
+        isLeftClickDragging = true;
+        //getting delta of current event to calculete where to drag
+        DragNode(currentEvent.delta);
+        GUI.changed = true;
+    }
+
+    public void DragNode(Vector2 delta)
+    {
+        rect.position += delta;
+        EditorUtility.SetDirty(this);
     }
 
 #endif

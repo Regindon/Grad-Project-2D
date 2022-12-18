@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/RoomNodeGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/RoomNodeGraph.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeSO.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,16 +28,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "WinFormsDesignerOptionsPage",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe" />
@@ -86,6 +86,8 @@
       <workItem from="1671307774012" duration="74000" />
       <workItem from="1671309000476" duration="8325000" />
       <workItem from="1671319679804" duration="55000" />
+      <workItem from="1671321765671" duration="39000" />
+      <workItem from="1671321827639" duration="4038000" />
     </task>
     <servers />
   </component>

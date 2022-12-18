@@ -6,6 +6,7 @@ public class RoomNodeGraphEditor : EditorWindow
 {
     private GUIStyle roomNodeStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
+    private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
 
     // Node layout values
@@ -79,7 +80,38 @@ public class RoomNodeGraphEditor : EditorWindow
 
     private void ProcessEvents(Event currentEvent)
     {
-        ProcessRoomNodeGraphEvents(currentEvent);
+        //get room node that mouse is over if its null or not currently being dragged
+        if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false){}
+        {
+            currentRoomNode = IsMouseOverRoomNode(currentEvent);
+            
+        }
+
+
+        // if mouse isnt over a room node
+        if (currentRoomNode== null)
+        {
+            ProcessRoomNodeGraphEvents(currentEvent);
+        }
+        else
+        {
+            //process room node events
+            currentRoomNode.ProcessEvents(currentEvent);
+        }
+    }
+
+    private RoomNodeSO IsMouseOverRoomNode(Event currentEvent)
+    {
+        for (int i = currentRoomNodeGraph.roomNodeList.Count-1; i >=0 ; i--)
+        {
+            // checking all room nodes boundry to see if our mouse is over the node
+            if (currentRoomNodeGraph.roomNodeList[i].rect.Contains(currentEvent.mousePosition))
+            {
+                return currentRoomNodeGraph.roomNodeList[i];
+            }
+        }
+
+        return null;
     }
 
     /// <summary>
