@@ -78,44 +78,59 @@ public class RoomNodeSO : ScriptableObject
 
         return roomArray;
     }
-    
-    //process evetns forthe node
+
+    /// <summary>
+    /// Process events for the node
+    /// </summary>
     public void ProcessEvents(Event currentEvent)
     {
-        //current event determines what type of interaction is happening. it is unity function
         switch (currentEvent.type)
         {
-            //process mouse down events
+            // Process Mouse Down Events
             case EventType.MouseDown:
                 ProcessMouseDownEvent(currentEvent);
                 break;
+
+            // Process Mouse Up Events
             case EventType.MouseUp:
                 ProcessMouseUpEvent(currentEvent);
                 break;
+
+            // Process Mouse Drag Events
             case EventType.MouseDrag:
                 ProcessMouseDragEvent(currentEvent);
                 break;
+
             default:
                 break;
         }
     }
 
+    /// Process mouse down events
+    /// </summary>
     private void ProcessMouseDownEvent(Event currentEvent)
     {
-        //left click down
+        // left click down
         if (currentEvent.button == 0)
         {
             ProcessLeftClickDownEvent();
         }
+        // right click down
+        else if (currentEvent.button == 1)
+        {
+            ProcessRightClickDownEvent(currentEvent);
+        }
     }
 
+    /// <summary>
+    /// Process left click down event
+    /// </summary>
     private void ProcessLeftClickDownEvent()
     {
-        //selection is unity editor class
         Selection.activeObject = this;
-        
-        //toggle node selection
-        if (isSelected==true)
+
+        // Toggle node selection
+        if (isSelected == true)
         {
             isSelected = false;
         }
@@ -125,15 +140,30 @@ public class RoomNodeSO : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Process right click down
+    ///
+    private void ProcessRightClickDownEvent(Event currentEvent)
+    {
+        roomNodeGraph.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);
+    }
+
+
+    /// <summary>
+    /// Process mouse up event
+    /// </summary>
     private void ProcessMouseUpEvent(Event currentEvent)
     {
-        //if left click is up
-        if (currentEvent.button==0)
+        // If left click up
+        if (currentEvent.button == 0)
         {
             ProcessLeftClickUpEvent();
         }
     }
 
+    /// <summary>
+    /// Process left click up event
+    /// </summary>
     private void ProcessLeftClickUpEvent()
     {
         if (isLeftClickDragging)
@@ -142,27 +172,55 @@ public class RoomNodeSO : ScriptableObject
         }
     }
 
+    /// <summary>
+    /// Process mouse drag event
+    /// </summary>
     private void ProcessMouseDragEvent(Event currentEvent)
     {
-        //process left click drag event
-        if (currentEvent.button==0)
+        // process left click drag event
+        if (currentEvent.button == 0)
         {
             ProcessLeftMouseDragEvent(currentEvent);
         }
     }
 
+
+    /// <summary>
+    /// Process left mouse drag event
+    /// </summary>
     private void ProcessLeftMouseDragEvent(Event currentEvent)
     {
         isLeftClickDragging = true;
-        //getting delta of current event to calculete where to drag
+
         DragNode(currentEvent.delta);
         GUI.changed = true;
     }
 
+    /// <summary>
+    /// Drag node
+    /// </summary>
     public void DragNode(Vector2 delta)
     {
         rect.position += delta;
         EditorUtility.SetDirty(this);
+    }
+
+    /// <summary>
+    /// Add childID to the node (returns true if the node has been added, false otherwise)
+    /// </summary>
+    public bool AddChildRoomNodeIDToRoomNode(string childID)
+    {
+        childRoomNodeIDList.Add(childID);
+        return true;
+    }
+
+    /// <summary>
+    /// Add parentID to the node (returns true if the node has been added, false otherwise)
+    /// </summary>
+    public bool AddParentRoomNodeIDToRoomNode(string parentID)
+    {
+        parentRoomNodeIDList.Add(parentID);
+        return true;
     }
 
 #endif
