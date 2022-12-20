@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2bc19b33fde27a44b1855e63a30aa5c, type: 3}
   m_Name: RoomNodeType_Entrance
   m_EditorClassIdentifier: 
-  roomNodeTypeName: Corridor NS
+  roomNodeTypeName: Entrance
   displayInNodeGraphEditor: 0
   isCorridor: 0
   isCorridorNS: 0
