@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - groundTilemap
+  - decoration1Tilemap
+  - decoration2Tilemap
+  - frontTilemap
+  - collisionTilemap
   layers:
   - Default
   - TransparentFX
@@ -13,8 +18,8 @@ TagManager:
   - UI
   - 
   - Camera 1
-  - 
-  - 
+  - Room
+  - Wall
   - 
   - 
   - 
@@ -40,4 +45,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 3482027659
+    locked: 0
+  - name: Ground2
+    uniqueID: 2775606137
+    locked: 0
+  - name: Ground Decoration 1
+    uniqueID: 2221232139
+    locked: 0
+  - name: Ground Decoration 2
+    uniqueID: 2305757071
+    locked: 0
+  - name: Instances
+    uniqueID: 3414049953
+    locked: 0
+  - name: Front
+    uniqueID: 864774875
+    locked: 0
+  - name: Collision
+    uniqueID: 890155441
     locked: 0
