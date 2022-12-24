@@ -15,9 +15,8 @@ public class RoomNodeGraphSO : ScriptableObject
 
     }
 
-    /// <summary>
-    /// Load the room node dictionary from the room node list.
-    /// </summary>
+    
+    //loading roomnode dic from roomnode list
     private void LoadRoomNodeDictionary()
     {
         roomNodeDictionary.Clear();
@@ -29,9 +28,7 @@ public class RoomNodeGraphSO : ScriptableObject
         }
     }
 
-    /// <summary>
-    /// Get room node by room nodeID
-    /// </summary>
+    //getting roomnode by id. checking all roomnode ids in roomnodeso 
     public RoomNodeSO GetRoomNode(string roomNodeID)
     {
         if (roomNodeDictionary.TryGetValue(roomNodeID, out RoomNodeSO roomNode))
@@ -45,13 +42,13 @@ public class RoomNodeGraphSO : ScriptableObject
 
     #region Editor Code
 
-    // The following code should only run in the Unity Editor
+    //those codes only run in edior
 #if UNITY_EDITOR
 
     [HideInInspector] public RoomNodeSO roomNodeToDrawLineFrom = null;
     [HideInInspector] public Vector2 linePosition;
 
-    // Repopulate node dictionary every time a change is made in the editor
+    //loading at any change room nodes to dic
     public void OnValidate()
     {
         LoadRoomNodeDictionary();

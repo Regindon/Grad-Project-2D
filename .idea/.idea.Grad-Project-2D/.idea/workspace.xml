@@ -4,9 +4,12 @@
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene/PostProcessing Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene/PostProcessing Profile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Palettes/PrototypePalette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Palettes/PrototypePalette.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +99,8 @@
       <workItem from="1671654548879" duration="2705000" />
       <workItem from="1671730355616" duration="9228000" />
       <workItem from="1671761621389" duration="470000" />
+      <workItem from="1671893343481" duration="7140000" />
+      <workItem from="1671904793751" duration="69000" />
     </task>
     <servers />
   </component>
