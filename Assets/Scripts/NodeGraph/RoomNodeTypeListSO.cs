@@ -16,6 +16,7 @@ public class RoomNodeTypeListSO : ScriptableObject
 
     #region Validation
 #if UNITY_EDITOR
+    //checking if there is any list object that is empty
     private void OnValidate()
     {
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(list), list);
