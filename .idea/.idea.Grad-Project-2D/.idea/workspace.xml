@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/Editor/RoomNodeGraphEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Palettes/PrototypePalette.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Palettes/PrototypePalette.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Character/IdleLeft.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Character/IdleLeft.anim" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +13,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Doorway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/RoomTemplateSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,6 +43,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Prototype_Build\Grad-Project-2D.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="E:\GitHub Projects\Grad-Project-2D\Builds\Prototype_Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;E:\GitHub Projects\Grad-Project-2D&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
@@ -101,6 +107,7 @@
       <workItem from="1671761621389" duration="470000" />
       <workItem from="1671893343481" duration="7140000" />
       <workItem from="1671904793751" duration="69000" />
+      <workItem from="1673554462509" duration="4424000" />
     </task>
     <servers />
   </component>
