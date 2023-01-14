@@ -22,7 +22,7 @@ MonoBehaviour:
   - position: {x: 13, y: 27}
     orientation: 0
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: 10, y: 28}
+    doorwayStartCopyPosition: {x: 10, y: 27}
     doorwayCopyTileWidth: 5
     doorwayCopyTileHeight: 5
     isConnected: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
   - position: {x: -11, y: -3}
     orientation: 2
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: -14, y: 2}
+    doorwayStartCopyPosition: {x: -13, y: 2}
     doorwayCopyTileWidth: 5
     doorwayCopyTileHeight: 5
     isConnected: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   - position: {x: -26, y: 12}
     orientation: 3
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: -27, y: 16}
+    doorwayStartCopyPosition: {x: 26, y: 16}
     doorwayCopyTileWidth: 6
     doorwayCopyTileHeight: 7
     isConnected: 0

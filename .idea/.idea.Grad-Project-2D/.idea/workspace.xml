@@ -3,9 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Character/IdleLeft.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Character/IdleLeft.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Dungeon1_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enums/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +26,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Doorway.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonLevelSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/RoomTemplateSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/SingletonMonobehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeTypeListSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -108,6 +123,7 @@
       <workItem from="1671893343481" duration="7140000" />
       <workItem from="1671904793751" duration="69000" />
       <workItem from="1673554462509" duration="4424000" />
+      <workItem from="1673718425358" duration="3541000" />
     </task>
     <servers />
   </component>
