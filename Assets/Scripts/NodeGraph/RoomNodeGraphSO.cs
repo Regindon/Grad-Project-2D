@@ -27,6 +27,20 @@ public class RoomNodeGraphSO : ScriptableObject
             roomNodeDictionary[node.id] = node;
         }
     }
+    
+    
+    //Get room node by roomNodeType
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
+    {
+        foreach (RoomNodeSO node in roomNodeList)
+        {
+            if (node.roomNodeType == roomNodeType)
+            {
+                return node;
+            }
+        }
+        return null;
+    }
 
     //getting roomnode by id. checking all roomnode ids in roomnodeso 
     public RoomNodeSO GetRoomNode(string roomNodeID)
@@ -36,6 +50,14 @@ public class RoomNodeGraphSO : ScriptableObject
             return roomNode;
         }
         return null;
+    }
+    
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
+    {
+        foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
+        {
+            yield return GetRoomNode(childNodeID);
+        }
     }
 
 
