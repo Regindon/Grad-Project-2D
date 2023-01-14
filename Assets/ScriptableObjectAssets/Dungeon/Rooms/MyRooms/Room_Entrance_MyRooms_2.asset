@@ -10,47 +10,47 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3be0fdb13b1e8d94c8c72b6818fdd15f, type: 3}
-  m_Name: Room_LargeRoom_MyRooms_2
+  m_Name: Room_Entrance_MyRooms_2
   m_EditorClassIdentifier: 
   guid: 
-  prefab: {fileID: 2039344565743812765, guid: eb8ac9de2d7fbb04298c9ea163231b6d, type: 3}
+  prefab: {fileID: 2039344565743812765, guid: ce5be043b4c30bb4c9a9f4952e165d98, type: 3}
   previousPrefab: {fileID: 0}
-  roomNodeType: {fileID: 11400000, guid: 199a109a80282614ebbcdbfbd13f0328, type: 2}
-  lowerBounds: {x: -26, y: -3}
-  upperBounds: {x: 24, y: 27}
+  roomNodeType: {fileID: 11400000, guid: 5537b4870f0f453488d78f37fe9474e6, type: 2}
+  lowerBounds: {x: -10, y: -10}
+  upperBounds: {x: 9, y: 9}
   doorwayList:
-  - position: {x: 13, y: 27}
+  - position: {x: 0, y: 9}
     orientation: 0
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: 10, y: 28}
+    doorwayStartCopyPosition: {x: -3, y: 10}
     doorwayCopyTileWidth: 5
     doorwayCopyTileHeight: 5
     isConnected: 0
     isUnavailable: 0
-  - position: {x: 24, y: 12}
+  - position: {x: 9, y: 0}
     orientation: 1
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: 18, y: 16}
-    doorwayCopyTileWidth: 6
+    doorwayStartCopyPosition: {x: 6, y: 4}
+    doorwayCopyTileWidth: 3
     doorwayCopyTileHeight: 7
     isConnected: 0
     isUnavailable: 0
-  - position: {x: -11, y: -3}
+  - position: {x: 0, y: -10}
     orientation: 2
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: -14, y: 2}
+    doorwayStartCopyPosition: {x: -3, y: -5}
     doorwayCopyTileWidth: 5
     doorwayCopyTileHeight: 5
     isConnected: 0
     isUnavailable: 0
-  - position: {x: -26, y: 12}
+  - position: {x: -10, y: 0}
     orientation: 3
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: -27, y: 16}
-    doorwayCopyTileWidth: 6
+    doorwayStartCopyPosition: {x: -11, y: 4}
+    doorwayCopyTileWidth: 3
     doorwayCopyTileHeight: 7
     isConnected: 0
     isUnavailable: 0
   spawnPositionArray:
-  - {x: -1, y: 6}
-  - {x: -1, y: 17}
+  - {x: 0, y: -4}
+  - {x: 0, y: 3}
