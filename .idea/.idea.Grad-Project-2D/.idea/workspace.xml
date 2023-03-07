@@ -3,12 +3,71 @@
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PrototypeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Level1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/DungeonRoomNodeGraphs/Dungeon1/RoomNodeGraph_Level1_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Character/SkillLeft.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Character/SkillLeft.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonLevelSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonLevelSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/Circle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/Circle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/Circle.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/Circle.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Assets/White_1x1.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/CMDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/CMDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/CameraFollow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/CameraFollow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/CameraFollowSetup.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/CameraFollowSetup.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/ComponentActions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/ComponentActions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/PositionRendererSorter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/MonoBehaviours/PositionRendererSorter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/README.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Resources/CodeMonkeyAssets.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Resources/CodeMonkeyAssets.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/Button_Sprite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/Button_Sprite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/Button_UI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/Button_UI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionPeriodic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionPeriodic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionTimer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionTimer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionUpdater.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/FunctionUpdater.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_Bar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_Bar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_BarMultiple.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_BarMultiple.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_Sprite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_Sprite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_TextComplex.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UI_TextComplex.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UtilsClass.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/UtilsClass.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Bar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Bar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Mesh.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Mesh.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Sprite.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/zCodeMonkey/Utils/World_Sprite.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +76,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/BulletScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameManagerx.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Doorway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonLevelSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,6 +92,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerAimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,21 +102,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;WinFormsDesignerOptionsPage&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "WinFormsDesignerOptionsPage",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Ekrem\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Ekrem\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Ekrem\\AppData\\Local\\Symbols\\src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Prototype_Build\Grad-Project-2D.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Prototype2_Build\Grad-Project-2D.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\GitHub Projects\Grad-Project-2D\Builds\Prototype_Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.6f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;E:\GitHub Projects\Grad-Project-2D&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="E:\GitHub Projects\Grad-Project-2D" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
@@ -78,10 +154,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34072">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="34072" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -120,6 +196,10 @@
       <workItem from="1673718425358" duration="4274000" />
       <workItem from="1673727236299" duration="4840000" />
       <workItem from="1673793176447" duration="16038000" />
+      <workItem from="1673966656947" duration="1433000" />
+      <workItem from="1673985877110" duration="8000" />
+      <workItem from="1673987462312" duration="375000" />
+      <workItem from="1678143997255" duration="1060000" />
     </task>
     <servers />
   </component>
