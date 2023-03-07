@@ -31,16 +31,16 @@ MonoBehaviour:
     orientation: 1
     doorPrefab: {fileID: 0}
     doorwayStartCopyPosition: {x: 18, y: 16}
-    doorwayCopyTileWidth: 6
-    doorwayCopyTileHeight: 7
+    doorwayCopyTileWidth: 7
+    doorwayCopyTileHeight: 8
     isConnected: 0
     isUnavailable: 0
   - position: {x: -1, y: -3}
     orientation: 2
     doorPrefab: {fileID: 0}
-    doorwayStartCopyPosition: {x: -3, y: 2}
+    doorwayStartCopyPosition: {x: -4, y: 2}
     doorwayCopyTileWidth: 5
-    doorwayCopyTileHeight: 5
+    doorwayCopyTileHeight: 6
     isConnected: 0
     isUnavailable: 0
   - position: {x: -26, y: 12}

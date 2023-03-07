@@ -21,7 +21,6 @@ public class RoomNodeGraphSO : ScriptableObject
     {
         roomNodeDictionary.Clear();
 
-        // Populate dictionary
         foreach (RoomNodeSO node in roomNodeList)
         {
             roomNodeDictionary[node.id] = node;
@@ -29,7 +28,6 @@ public class RoomNodeGraphSO : ScriptableObject
     }
     
     
-    //Get room node by roomNodeType
     public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
     {
         foreach (RoomNodeSO node in roomNodeList)

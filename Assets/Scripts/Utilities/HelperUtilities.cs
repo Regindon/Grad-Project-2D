@@ -4,9 +4,7 @@ using UnityEngine;
 
 public static class HelperUtilities
 {
-    /// <summary>
-    /// Empty string debug check
-    /// </summary>
+    
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
     {
         if (stringToCheck == "")
@@ -17,9 +15,7 @@ public static class HelperUtilities
         return false;
     }
 
-    /// <summary>
-    /// list empty or contains null value check - returns true if there is an error
-    /// </summary>
+    
     public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)
     {
         bool error = false;
