@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerPrototype : MonoBehaviour
 {
     private Rigidbody2D rb;
     private float walkSpeed = 4f;

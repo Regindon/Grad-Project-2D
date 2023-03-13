@@ -16,7 +16,7 @@ public class PlayerAimWeapon : MonoBehaviour
     
     private Transform aimTransform;
     private Transform aimGunEndPointTransform;
-    private PlayerController playerController;
+    private PlayerControllerPrototype playerController;
     private Vector3 mousePosition;
 
     public GameObject bullet;
@@ -28,7 +28,7 @@ public class PlayerAimWeapon : MonoBehaviour
     private void Awake()
     {
         aimTransform = transform.Find("Aim");
-        playerController = gameObject.GetComponent<PlayerController>();
+        playerController = gameObject.GetComponent<PlayerControllerPrototype>();
         aimGunEndPointTransform = aimTransform.Find("GunEndPosition");
 
     }
