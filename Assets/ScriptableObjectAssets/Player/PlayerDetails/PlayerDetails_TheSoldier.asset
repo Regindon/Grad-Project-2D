@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a773b6402cdc4e9a1bc3afda34f67, type: 3}
+  m_Name: PlayerDetails_TheSoldier
+  m_EditorClassIdentifier: 
+  playerCharacterName: The Soldier
+  playerPrefab: {fileID: 5938347700491211557, guid: 25cd45ce0ff728846ae2804b19d0f1c7, type: 3}
+  runtimeAnimatorController: {fileID: 9100000, guid: 8830c20bc5c44dd49a03bf79fbf38068, type: 2}
+  playerHealthAmount: 100
+  playerMiniMapIcon: {fileID: 21300000, guid: 9d66d5ca89499be44aabfc5a4eb5d4f7, type: 3}
+  playerHandSprite: {fileID: 21300000, guid: 9d66d5ca89499be44aabfc5a4eb5d4f7, type: 3}

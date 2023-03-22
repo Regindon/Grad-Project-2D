@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7555074873134303422
+--- !u!1001 &3996941756273008012
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,10 +11,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8830c20bc5c44dd49a03bf79fbf38068, type: 2}
-    - target: {fileID: 7286475224988339875, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 98547752, guid: ad2d9be344b96d14aa778e493dd34836, type: 3}
     - target: {fileID: 7286475224988339878, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -62,6 +58,42 @@ PrefabInstance:
     - target: {fileID: 7286475224988339881, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
       propertyPath: m_Name
       value: TheSoldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465048, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465048, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286475225404465051, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be622276fbd27ea4e86a19b7356048fc, type: 3}
