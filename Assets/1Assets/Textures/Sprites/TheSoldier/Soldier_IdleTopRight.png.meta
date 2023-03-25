@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cd6d90b79a24b4e4fbd0f7a13547b7eb
+guid: ae5502fd4cab55a49a968c83c5f7793e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -152,7 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldier_SkillRight_0
+      name: Soldier_IdleTopRight_0
       rect:
         serializedVersion: 2
         x: 0
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ad46fa199a96b447a85c86f58b97ac4
-      internalID: 2068541218
+      spriteID: 0da77df8ac28f7e45b7ef54e105ad4d0
+      internalID: 1758852986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillRight_1
+      name: Soldier_IdleTopRight_1
       rect:
         serializedVersion: 2
         x: 32
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6012615fc76d3f4995c4df7391e5803
-      internalID: 1980248323
+      spriteID: ffbc0c8473d46fe4c9ef644bb9a99530
+      internalID: -594160813
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillRight_2
+      name: Soldier_IdleTopRight_2
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 225387a636ad7f64c9d48651733c794d
-      internalID: -451518478
+      spriteID: d2244bf57464bf44fa91a99dccf49bba
+      internalID: 1493584521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillRight_3
+      name: Soldier_IdleTopRight_3
       rect:
         serializedVersion: 2
         x: 96
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb250d7a77d610441a6e1de6b7caf05d
-      internalID: -25169074
+      spriteID: 7c7a64e8156a8884bb3f5d9498f97652
+      internalID: -1313069908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillRight_4
+      name: Soldier_IdleTopRight_4
       rect:
         serializedVersion: 2
         x: 128
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de369032a1b122b4bbb24e37f2dcac67
-      internalID: -2039652877
+      spriteID: 1cb2cd3875a915a4aa5fab46866b8d42
+      internalID: -1496100880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillRight_5
+      name: Soldier_IdleTopRight_5
       rect:
         serializedVersion: 2
         x: 160
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7bb0584110ffcb4e80dc5354e3b4a1c
-      internalID: 780517925
+      spriteID: d5b6eae1172853943bd19def73196483
+      internalID: -719787032
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_SkillRight_5: 780517925
-      Soldier_SkillRight_3: -25169074
-      Soldier_SkillRight_2: -451518478
-      Soldier_SkillRight_4: -2039652877
-      Soldier_SkillRight_0: 2068541218
-      Soldier_SkillRight_1: 1980248323
+      Soldier_IdleTopRight_0: 1758852986
+      Soldier_IdleTopRight_4: -1496100880
+      Soldier_IdleTopRight_3: -1313069908
+      Soldier_IdleTopRight_2: 1493584521
+      Soldier_IdleTopRight_5: -719787032
+      Soldier_IdleTopRight_1: -594160813
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
