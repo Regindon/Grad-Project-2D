@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4d5b12dc505f445a5d4388dc4f58c6
-      internalID: -728109218
+      spriteID: 2691b4f19d6518146ae8d2cb52a908b7
+      internalID: 689995976
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d0b21e0223e834399c154d89b0558a
-      internalID: 414518451
+      spriteID: 1f6b15bc5424d6f4ab92bbf924750961
+      internalID: 1927704568
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9888b82cfb507114eab32a35cb41b0ce
-      internalID: 2035997248
+      spriteID: 1e15741f3d2757d4a948b465a9081e88
+      internalID: -1497460202
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a17715dc5030cc6478718ba1038a8cc7
-      internalID: -2107261876
+      spriteID: 92ee04d75478a9649952cf810d21beed
+      internalID: -1077424091
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a8021062975c114f847d3f93be385d6
-      internalID: 1005979752
+      spriteID: 08cb33ce1ce1ba44494abeafbbcdd86c
+      internalID: -1499020610
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250a96ae08b8f8e428d15a9d6851fb93
-      internalID: 1816812070
+      spriteID: 93e84e402a9b7c84fa015b01a6e1d219
+      internalID: 555576782
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_IdleLeft_2: 2035997248
-      Soldier_IdleLeft_3: -2107261876
-      Soldier_IdleLeft_0: -728109218
-      Soldier_IdleLeft_1: 414518451
-      Soldier_IdleLeft_5: 1816812070
-      Soldier_IdleLeft_4: 1005979752
+      Soldier_IdleLeft_2: -1497460202
+      Soldier_IdleLeft_3: -1077424091
+      Soldier_IdleLeft_0: 689995976
+      Soldier_IdleLeft_1: 1927704568
+      Soldier_IdleLeft_5: 555576782
+      Soldier_IdleLeft_4: -1499020610
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 890e26b4eb607224491fb5f11d9749e6
-      internalID: 133890243
+      spriteID: 8f76ec2af3f63d142b037133aa840b67
+      internalID: -148428897
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1406c9a4eb9f184da0c589f6372e596
-      internalID: -228756543
+      spriteID: 9feffc02854b23f459acc033236a4f2a
+      internalID: -1758374162
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ad81be35e2ad2e4cbc6b01f8b82ad04
-      internalID: 137670665
+      spriteID: bb1d843572785c349a29430bc42c086a
+      internalID: -1780029231
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 252131420c15e384f869e7719b4e00a7
-      internalID: 1931250096
+      spriteID: a8ee643c8ce2d6a45b76829d0bc23fda
+      internalID: 743854011
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8ec42d40d1caf64f8788dc8b3653e94
-      internalID: -444659434
+      spriteID: 2be82f90611ab9c4fb5fdb93fb43060f
+      internalID: 1137598088
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a11ae63b35d98a043b639e8f98cb9e45
-      internalID: -1888202833
+      spriteID: b460d5ff908045344b61c8081a67da42
+      internalID: 2131871571
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_RunDown_3: 1931250096
-      Soldier_RunDown_2: 137670665
-      Soldier_RunDown_1: -228756543
-      Soldier_RunDown_0: 133890243
-      Soldier_RunDown_4: -444659434
-      Soldier_RunDown_5: -1888202833
+      Soldier_RunDown_3: 743854011
+      Soldier_RunDown_2: -1780029231
+      Soldier_RunDown_1: -1758374162
+      Soldier_RunDown_0: -148428897
+      Soldier_RunDown_4: 1137598088
+      Soldier_RunDown_5: 2131871571
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

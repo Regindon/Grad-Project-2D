@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 922d3490f4132b04cb5966242fe0f1df
-      internalID: -1932136924
+      spriteID: bf662f35780c4654db9322805bbd417b
+      internalID: 717887380
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1041087c66f563439233a42d9387684
-      internalID: -399165571
+      spriteID: 9ee3b1d33d206d84aa44b78094f96d15
+      internalID: -492750755
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bebb86f981c72843997db62ed7df891
-      internalID: 405355002
+      spriteID: ad62820accbcb7e4bb0cd7ae12bd7f0a
+      internalID: -716449672
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d527df9488ad9264587a9f430e52755c
-      internalID: 2064225400
+      spriteID: 53ea5cec017dd1640bbcef9e647735e8
+      internalID: 1877707583
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3951a86085a3564cbf52ecb85ac57be
-      internalID: 962036210
+      spriteID: f1e987355b37be34c871f96cf6d27203
+      internalID: 306561557
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f77328faaf47624f95502f3da72e251
-      internalID: -39956514
+      spriteID: 822cffe2a9e7dfb44bd72de5da5d315b
+      internalID: -96488213
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_DashLeft_1: -399165571
-      Soldier_DashLeft_5: -39956514
-      Soldier_DashLeft_3: 2064225400
-      Soldier_DashLeft_4: 962036210
-      Soldier_DashLeft_2: 405355002
-      Soldier_DashLeft_0: -1932136924
+      Soldier_DashLeft_1: -492750755
+      Soldier_DashLeft_5: -96488213
+      Soldier_DashLeft_3: 1877707583
+      Soldier_DashLeft_4: 306561557
+      Soldier_DashLeft_2: -716449672
+      Soldier_DashLeft_0: 717887380
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

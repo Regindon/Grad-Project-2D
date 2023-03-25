@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e1ef3a7409cfe524685b8911dd81160c
+guid: 579a0cd5daa611d44bfa4a2ff3b3ffa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -152,7 +152,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Soldier_SkillLeft_0
+      name: Soldier_RunUpLeft_0
       rect:
         serializedVersion: 2
         x: 0
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bb2e758b7865d84185b9ea0095337cf
-      internalID: -687313461
+      spriteID: 2514ffc4a47d0d546bdb5cdf40362b54
+      internalID: -1606412198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillLeft_1
+      name: Soldier_RunUpLeft_1
       rect:
         serializedVersion: 2
         x: 32
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5365079af3069b74cbc15f8a891dbded
-      internalID: 647374106
+      spriteID: 92990b64f0c3fb94381de9d371602837
+      internalID: -516247926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillLeft_2
+      name: Soldier_RunUpLeft_2
       rect:
         serializedVersion: 2
         x: 64
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6c2e799e68bdb048b55e1b2270cc5c6
-      internalID: 315035843
+      spriteID: 0c5060ff285496b498dc71f92475c1e5
+      internalID: -1975243659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillLeft_3
+      name: Soldier_RunUpLeft_3
       rect:
         serializedVersion: 2
         x: 96
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea4ef150172087741acde172cbc2c720
-      internalID: 1099247662
+      spriteID: 401153e08aa9f8c408c5295ee8f67a8f
+      internalID: 1530070770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillLeft_4
+      name: Soldier_RunUpLeft_4
       rect:
         serializedVersion: 2
         x: 128
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6613b98430cd714786686e94d10dddb
-      internalID: 2081558764
+      spriteID: 3b71cc4969212fe4c9dfbf46f1d61075
+      internalID: -1041754814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Soldier_SkillLeft_5
+      name: Soldier_RunUpLeft_5
       rect:
         serializedVersion: 2
         x: 160
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91d111c2d7a6342478145eccce1b48c4
-      internalID: 1107094847
+      spriteID: b060f50365ae3664595a9a4a5e33660d
+      internalID: -386869579
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_SkillLeft_2: 315035843
-      Soldier_SkillLeft_1: 647374106
-      Soldier_SkillLeft_4: 2081558764
-      Soldier_SkillLeft_3: 1099247662
-      Soldier_SkillLeft_0: -687313461
-      Soldier_SkillLeft_5: 1107094847
+      Soldier_RunUpLeft_0: -1606412198
+      Soldier_RunUpLeft_3: 1530070770
+      Soldier_RunUpLeft_2: -1975243659
+      Soldier_RunUpLeft_4: -1041754814
+      Soldier_RunUpLeft_5: -386869579
+      Soldier_RunUpLeft_1: -516247926
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

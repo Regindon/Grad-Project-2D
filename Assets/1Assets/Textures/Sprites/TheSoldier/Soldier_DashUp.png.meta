@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c34c755d50218c54e824a622b260c993
-      internalID: -505218412
+      spriteID: 2224ba09183fea1438a625512f205d0d
+      internalID: -69251522
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e14d892456e03947ab98b3c3ef56333
-      internalID: -1398168233
+      spriteID: ecd8b13e507b50b4e8fc32c42b298480
+      internalID: -2004484041
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c908b38423b6d9247851ea1f9963e6ba
-      internalID: -1002870572
+      spriteID: 7f0a02cdf983c874cb2bc90d1ae64681
+      internalID: -763105671
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d2d3d028fbb64642870453bef14386d
-      internalID: 1608733241
+      spriteID: 7fd6362bd9d2f4c4d81f938e51f3ff98
+      internalID: 777439842
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef78e32444f8dc4428104e7f4bd9291e
-      internalID: -1307176468
+      spriteID: cd779cc6d6d41624ab28b0f8ba93cdca
+      internalID: -2107530720
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f08fe1dbfcf0c44d9448cbe55f5b109
-      internalID: -675924103
+      spriteID: 33d89f4900f41fd42915d2aea930310a
+      internalID: -353924865
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_DashUp_3: 1608733241
-      Soldier_DashUp_0: -505218412
-      Soldier_DashUp_1: -1398168233
-      Soldier_DashUp_5: -675924103
-      Soldier_DashUp_2: -1002870572
-      Soldier_DashUp_4: -1307176468
+      Soldier_DashUp_3: 777439842
+      Soldier_DashUp_0: -69251522
+      Soldier_DashUp_1: -2004484041
+      Soldier_DashUp_5: -353924865
+      Soldier_DashUp_2: -763105671
+      Soldier_DashUp_4: -2107530720
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

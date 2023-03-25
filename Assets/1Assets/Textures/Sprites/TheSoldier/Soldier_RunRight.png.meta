@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22861df773e819c43baf6b114747e9e9
-      internalID: 914299430
+      spriteID: 35c7fd229a2addb4f9c9c6241a2c6ea2
+      internalID: 1476549732
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aa6d45e8aa6fa14c9b25dd699fd241d
-      internalID: 1130830985
+      spriteID: 83505471a25016f43aecc3493e351247
+      internalID: 1630838710
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a6ad487013f48e4ebe770da2956fb74
-      internalID: -1095589835
+      spriteID: 2fdf8c2f1656aee49bba9c456b15c978
+      internalID: -1930245208
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 962f5103964e2904bb644fd9f449e44c
-      internalID: -1063015932
+      spriteID: 0aa8245184f90494690d92db8d4b5e87
+      internalID: 1091729054
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0105ec827b3718041b926e0b45031182
-      internalID: -1256912170
+      spriteID: dc220660dad98374b93da9eae5b3fcb1
+      internalID: 956207613
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 363ec5ca9f7bd9d4ebed159ec5943ec2
-      internalID: -188647516
+      spriteID: ed8e9bbd126d26e4cb0e58047a1ab85c
+      internalID: 2024850044
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soldier_RunRight_1: 1130830985
-      Soldier_RunRight_5: -188647516
-      Soldier_RunRight_4: -1256912170
-      Soldier_RunRight_2: -1095589835
-      Soldier_RunRight_0: 914299430
-      Soldier_RunRight_3: -1063015932
+      Soldier_RunRight_1: 1630838710
+      Soldier_RunRight_5: 2024850044
+      Soldier_RunRight_4: 956207613
+      Soldier_RunRight_2: -1930245208
+      Soldier_RunRight_0: 1476549732
+      Soldier_RunRight_3: 1091729054
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
