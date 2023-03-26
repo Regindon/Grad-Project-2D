@@ -36,26 +36,24 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     protected override void Awake()
     {
-        // Call base class
+        //call base class
         base.Awake();
 
-        // Set player details - saved in current player scriptable object from the main menu
+        
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
 
-        // Instantiate player
+        //Instantiate player
         InstantiatePlayer();
 
     }
 
-    /// <summary>
-    /// Create player in scene at position
-    /// </summary>
+    
     private void InstantiatePlayer()
     {
-        // Instantiate player
+        //Instantiate player
         GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
 
-        // Initialize Player
+        //Initialize Player
         player = playerGameObject.GetComponent<Player>();
 
         player.Initialize(playerDetails);
@@ -64,18 +62,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
 
 
-    // Start is called before the first frame update
+    
     private void Start()
     {
         gameState = GameState.gameStarted;
     }
 
-    // Update is called once per frame
+    
     private void Update()
     {
         HandleGameState();
 
-        // For testing
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             gameState = GameState.gameStarted;
@@ -83,17 +81,15 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     }
 
-    /// <summary>
-    /// Handle game state
-    /// </summary>
+    
     private void HandleGameState()
     {
-        // Handle game state
+        
         switch (gameState)
         {
             case GameState.gameStarted:
 
-                // Play first level
+                //play first level
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
@@ -104,22 +100,19 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     }
 
-    /// <summary>
-    /// Set the current room the player in in
-    /// </summary>
+    
     public void SetCurrentRoom(Room room)
     {
         previousRoom = currentRoom;
         currentRoom = room;
 
-        //// Debug
-        //Debug.Log(room.prefab.name.ToString());
+        
     }
 
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
-        // Build dungeon for level
+        
         bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
         if (!dungeonBuiltSucessfully)
@@ -127,19 +120,17 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
 
-        // Set player roughly mid-room
+        
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);
 
-        // Get nearest spawn point in room nearest to player
+        
         player.gameObject.transform.position = HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
 
 
     }
 
 
-    /// <summary>
-    /// Get the player
-    /// </summary>
+    
     public Player GetPlayer()
     {
         return player;
@@ -147,9 +138,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
 
 
-    /// <summary>
-    /// Get the current room the player is in
-    /// </summary>
+    
     public Room GetCurrentRoom()
     {
         return currentRoom;

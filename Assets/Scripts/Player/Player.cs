@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-
+/*
 #region REQUIRE COMPONENTS
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(PlayerControl))]
@@ -24,7 +24,7 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Rigidbody2D))]
 [DisallowMultipleComponent]
 #endregion REQUIRE COMPONENTS
-
+*/
 
 
 
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+        //load components
         health = GetComponent<Health>();
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
@@ -52,20 +52,17 @@ public class Player : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Initialize the player
-    /// </summary>
+    //Initialize the player
     public void Initialize(PlayerDetailsSO playerDetails)
     {
         this.playerDetails = playerDetails;
 
-        // Set player starting health
+        //Set player starting health
         SetPlayerHealth();
     }
 
-    /// <summary>
-    /// Set player health from playerDetails SO
-    /// </summary>
+
+    //Set player health from playerDetails SO
     private void SetPlayerHealth()
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);

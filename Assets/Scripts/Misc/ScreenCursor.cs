@@ -6,7 +6,7 @@ public class ScreenCursor : MonoBehaviour
 {
     private void Awake()
     {
-        // Set hardware cursor off
+        //set hardware cursor off
         Cursor.visible = false;
     }
 

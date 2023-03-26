@@ -15,19 +15,17 @@ public class CinemachineTarget : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+       
         cinemachineTargetGroup = GetComponent<CinemachineTargetGroup>();
     }
 
-    // Start is called before the first frame update
+  
     void Start()
     {
         SetCinemachineTargetGroup();
     }
 
-    /// <summary>
-    /// Set the cinemachine camera target group.
-    /// </summary>
+    //The target group
     private void SetCinemachineTargetGroup()
     {
         // Create target group for cinemachine for the cinemachine camera to follow  - group will include the player and screen cursor
