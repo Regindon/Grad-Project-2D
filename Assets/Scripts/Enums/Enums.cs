@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public enum Orientation
 {
     north,
@@ -9,6 +5,16 @@ public enum Orientation
     south,
     west,
     none
+}
+
+public enum AimDirection
+{
+    Up,
+    UpRight,
+    UpLeft,
+    Right,
+    Left,
+    Down
 }
 
 public enum GameState
