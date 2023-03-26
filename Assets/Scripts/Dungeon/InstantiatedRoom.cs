@@ -28,9 +28,7 @@ public class InstantiatedRoom : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Initialise The Instantiated Room
-    /// </summary>
+    
     public void Initialise(GameObject roomGameobject)
     {
         PopulateTilemapMemberVariables(roomGameobject);
@@ -41,9 +39,7 @@ public class InstantiatedRoom : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Populate the tilemap and grid memeber variables.
-    /// </summary>
+    
     private void PopulateTilemapMemberVariables(GameObject roomGameobject)
     {
         // Get the grid component.
@@ -83,9 +79,7 @@ public class InstantiatedRoom : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Block Off Unused Doorways In The Room
-    /// </summary>
+    
     private void BlockOffUnusedDoorWays()
     {
         // Loop through all doorways
@@ -127,9 +121,7 @@ public class InstantiatedRoom : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Block a doorway on a tilemap layer
-    /// </summary>
+    
     private void BlockADoorwayOnTilemapLayer(Tilemap tilemap, Doorway doorway)
     {
         switch (doorway.orientation)
@@ -150,9 +142,7 @@ public class InstantiatedRoom : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Block doorway horizontally - for North and South doorways
-    /// </summary>
+    
     private void BlockDoorwayHorizontally(Tilemap tilemap, Doorway doorway)
     {
         Vector2Int startPosition = doorway.doorwayStartCopyPosition;
@@ -174,9 +164,7 @@ public class InstantiatedRoom : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Block doorway vertically - for East and West doorways
-    /// </summary>
+    
     private void BlockDoorwayVertically(Tilemap tilemap, Doorway doorway)
     {
         Vector2Int startPosition = doorway.doorwayStartCopyPosition;
@@ -202,9 +190,7 @@ public class InstantiatedRoom : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Disable collision tilemap renderer
-    /// </summary>
+    
     private void DisableCollisionTilemapRenderer()
     {
         // Disable collision tilemap renderer
