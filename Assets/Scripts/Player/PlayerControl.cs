@@ -63,6 +63,7 @@ public class PlayerControl : MonoBehaviour
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");
         bool rightMouseButtonDown = Input.GetMouseButtonDown(1);
+        bool spaceKeyDown = Input.GetKeyDown(KeyCode.Space);
 
         
         Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
@@ -76,7 +77,7 @@ public class PlayerControl : MonoBehaviour
         //if there is movement either move or roll
         if (direction != Vector2.zero)
         {
-            if (!rightMouseButtonDown)
+            if (!spaceKeyDown)
             {
                 
                 player.movementByVelocityEvent.CallMovementByVelocityEvent(direction, moveSpeed);
