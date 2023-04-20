@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,8 +62,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
 
-
     
+
     private void Start()
     {
         gameState = GameState.gameStarted;

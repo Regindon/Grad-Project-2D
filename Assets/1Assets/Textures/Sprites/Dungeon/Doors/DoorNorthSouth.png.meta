@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 998be8a2f5f529d4faa6ca1cb3b0842d
+guid: b34262b0ccc98124dae1308123801975
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -156,8 +156,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
+        y: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22b855b8a3b7a77468187ddc4fe1fa6b
-      internalID: -89750854
+      spriteID: b07de2464d9ee174ebb8c06d0309bdb7
+      internalID: 926959133
       vertices: []
       indices: 
       edges: []
@@ -176,9 +176,9 @@ TextureImporter:
       name: DoorNorthSouth_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
+        x: 96
+        y: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2481908e78fdf46488736346380a2f07
-      internalID: -2124484738
+      spriteID: a64d3098b61092b408e3cf2477070cbd
+      internalID: 724865286
       vertices: []
       indices: 
       edges: []
@@ -197,9 +197,9 @@ TextureImporter:
       name: DoorNorthSouth_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
+        x: 192
+        y: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c666e04aa0952242a2e246e43c171e9
-      internalID: -773167799
+      spriteID: 940bbbd1757ec2a41b6992d3cee0baec
+      internalID: -2050931293
       vertices: []
       indices: 
       edges: []
@@ -218,9 +218,9 @@ TextureImporter:
       name: DoorNorthSouth_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 0
         y: 0
-        width: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67a30e73b9ffcdc4bacf43c3d56c4ca7
-      internalID: 772737247
+      spriteID: 0d72173639e0bd645b0e483b92fa7241
+      internalID: 644576707
       vertices: []
       indices: 
       edges: []
@@ -239,9 +239,9 @@ TextureImporter:
       name: DoorNorthSouth_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 96
         y: 0
-        width: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 861ec74488e8bf04e8bbe7eb068ffee6
-      internalID: 341580438
+      spriteID: 5d33be85c14a4a74cb77688542d10798
+      internalID: 34410613
       vertices: []
       indices: 
       edges: []
@@ -260,9 +260,9 @@ TextureImporter:
       name: DoorNorthSouth_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 192
         y: 0
-        width: 64
+        width: 96
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -271,50 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 820519f02def63b45a2709fc8ec1f5d7
-      internalID: 1853069091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorNorthSouth_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7579529752505346b06c8899c174331
-      internalID: 246315618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DoorNorthSouth_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fb9ac67e1cb0614c8f44ab6d2a4d5d3
-      internalID: -391137324
+      spriteID: 9270f3e3cc9627a43b8eaa1af0e1379c
+      internalID: -1877995215
       vertices: []
       indices: 
       edges: []
@@ -330,14 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DoorNorthSouth_2: -773167799
-      DoorNorthSouth_6: 246315618
-      DoorNorthSouth_0: -89750854
-      DoorNorthSouth_3: 772737247
-      DoorNorthSouth_5: 1853069091
-      DoorNorthSouth_1: -2124484738
-      DoorNorthSouth_4: 341580438
-      DoorNorthSouth_7: -391137324
+      DoorNorthSouth_2: -2050931293
+      DoorNorthSouth_0: 926959133
+      DoorNorthSouth_3: 644576707
+      DoorNorthSouth_5: -1877995215
+      DoorNorthSouth_1: 724865286
+      DoorNorthSouth_4: 34410613
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
