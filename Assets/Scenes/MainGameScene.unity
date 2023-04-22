@@ -532,7 +532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8778a5058a5ed2d46a0250a779d9b72f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolArray: []
+  poolArray:
+  - poolSize: 30
+    prefab: {fileID: 2193914321262673151, guid: 7dda2a6ccdd58f14db273953cc5f4cf1, type: 3}
+    componentType: IFireable
 --- !u!4 &700395614
 Transform:
   m_ObjectHideFlags: 0
@@ -1130,7 +1133,7 @@ MonoBehaviour:
   dungeonLevelList:
   - {fileID: 11400000, guid: f90ce30b2462e3f48869501835460384, type: 2}
   - {fileID: 11400000, guid: eac798660bc3e8d468cdac8591465115, type: 2}
-  currentDungeonLevelListIndex: 0
+  currentDungeonLevelListIndex: 1
   gameState: 0
 --- !u!4 &2085154381
 Transform:
