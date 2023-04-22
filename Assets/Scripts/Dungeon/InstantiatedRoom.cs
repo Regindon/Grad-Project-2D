@@ -224,7 +224,7 @@ public class InstantiatedRoom : MonoBehaviour
                 {
                     // create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
-                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y + tileDistance, 0f);
+                    door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y , 0f);
                 }
                 else if (doorway.orientation == Orientation.south)
                 {
