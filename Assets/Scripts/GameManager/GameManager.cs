@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -61,8 +62,27 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
 
+    private void OnEnable()
+    {
+        // Subscribe to room changed event.
+        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+    }
 
+    private void OnDisable()
+    {
+        // Unsubscribe from room changed event
+        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
+
+    }
     
+    
+    // Handle room changed event
+    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    {
+        SetCurrentRoom(roomChangedEventArgs.room);
+    }
+    
+
     private void Start()
     {
         gameState = GameState.gameStarted;
@@ -120,6 +140,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
 
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
         
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);
 
