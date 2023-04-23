@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c67a0f550df6e73438d00451421889f2, type: 3}
+  m_Name: DungeonLevel_2
+  m_EditorClassIdentifier: 
+  levelName: Level2
+  roomTemplateList:
+  - {fileID: 11400000, guid: 749265bfebd71cf4aa8a3561331f644b, type: 2}
+  - {fileID: 11400000, guid: c50f917846a5a4e48b4b3ba55101c19f, type: 2}
+  - {fileID: 11400000, guid: 508b6f5bb38d853449f3970340dea3a3, type: 2}
+  - {fileID: 11400000, guid: 03505e4b196b66249b402f961195d635, type: 2}
+  - {fileID: 11400000, guid: 10fb47611655ba24189171638df41699, type: 2}
+  - {fileID: 11400000, guid: 51b12c2c2a681ec4885e650bfa353353, type: 2}
+  - {fileID: 11400000, guid: 323b5fc474b42a348978a851cd7348e5, type: 2}
+  - {fileID: 11400000, guid: 38907d26f90557c409f97c52d8caa5dc, type: 2}
+  - {fileID: 11400000, guid: b7baa2ad6e9fee24bb81e0093bef09be, type: 2}
+  - {fileID: 11400000, guid: 19ec9a24614d66f4094370d01811d506, type: 2}
+  - {fileID: 11400000, guid: fe3f47bf0a510294f9f2c1b0f81df9af, type: 2}
+  - {fileID: 11400000, guid: 4ea5112a81ad281439c399c29aa11525, type: 2}
+  - {fileID: 11400000, guid: 1bb03a9626a3c8f438295ec83f14577d, type: 2}
+  - {fileID: 11400000, guid: 180ae0ab91cd85b419c883d485dda5b1, type: 2}
+  roomNodeGraphList:
+  - {fileID: 11400000, guid: 9247a3db345bd0a439365151f98481ff, type: 2}
+  - {fileID: 11400000, guid: a569a20fee83dcc46bce9dc24a6d84b9, type: 2}
+  - {fileID: 11400000, guid: a1914e13e0ab3c54daa602cf0903da94, type: 2}
+  - {fileID: 11400000, guid: ffe7cec060d00ee4d831bc2d52e3f46d, type: 2}
