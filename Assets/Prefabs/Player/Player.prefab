@@ -116,6 +116,9 @@ GameObject:
   - component: {fileID: 4937769374967687145}
   - component: {fileID: -3250219005313303518}
   - component: {fileID: 4892263307138820194}
+  - component: {fileID: 6439603983488073552}
+  - component: {fileID: 8430498527893530657}
+  - component: {fileID: 6842205605415222314}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -346,6 +349,8 @@ MonoBehaviour:
   setActiveWeaponEvent: {fileID: 0}
   activeWeapon: {fileID: 0}
   weaponFiredEvent: {fileID: 0}
+  reloadWeaponEvent: {fileID: 0}
+  weaponReloadedEvent: {fileID: 0}
   spriteRenderer: {fileID: 0}
   animator: {fileID: 0}
 --- !u!114 &2094640161099325736
@@ -532,6 +537,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05dab15d3dc3a8948a72134c40595806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6439603983488073552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286475224988339881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa9b113997c28844a9c71a823f1186b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8430498527893530657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286475224988339881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc071562dc974445be0dfb1ee7e8af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6842205605415222314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286475224988339881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fec6d93fb8d00140a35c72862e8a27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7286475225058773105
