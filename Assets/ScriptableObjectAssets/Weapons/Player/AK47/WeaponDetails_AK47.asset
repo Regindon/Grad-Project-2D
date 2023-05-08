@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d74429962f8cc54b97c0fea0be28140, type: 3}
-  m_Name: WeaponDetails_Pistol
+  m_Name: WeaponDetails_AK47
   m_EditorClassIdentifier: 
-  weaponName: Pistol
-  weaponSprite: {fileID: 21300000, guid: fa325509cde57444d945fe29c503c22e, type: 3}
-  weaponShootPosition: {x: 0.39, y: 0.14, z: 0}
-  weaponCurrentAmmo: {fileID: 11400000, guid: 27deefc2f194e69478c6896e1fcb3438, type: 2}
-  hasInfiniteAmmo: 1
+  weaponName: AK-47
+  weaponSprite: {fileID: 21300000, guid: 9dfbcf35418d6e042b39a5a5a2074bb4, type: 3}
+  weaponShootPosition: {x: 0.45, y: 0.07, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 677f56a2192805b4d90559c745391c28, type: 2}
+  hasInfiniteAmmo: 0
   hasInfiniteClipCapacity: 0
-  weaponClipAmmoCapacity: 12
-  weaponAmmoCapacity: 0
-  weaponFireRate: 0.25
+  weaponClipAmmoCapacity: 30
+  weaponAmmoCapacity: 120
+  weaponFireRate: 0.2
   weaponPrechargeTime: 0
-  weaponReloadTime: 1.2
+  weaponReloadTime: 2
