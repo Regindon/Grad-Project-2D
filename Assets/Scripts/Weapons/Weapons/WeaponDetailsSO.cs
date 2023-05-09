@@ -28,6 +28,11 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("Weapon current ammo")]
     #endregion Tooltip
     public AmmoDetailsSO weaponCurrentAmmo;
+    
+    #region Tooltip
+    [Tooltip("Weapon shoot effect SO - contains particle effecct parameters to be used in conjunction with the weaponShootEffectPrefab ")]
+    #endregion Tooltip
+    public WeaponShootEffectSO weaponShootEffect;
 
     #region Header WEAPON OPERATING VALUES
     [Space(10)]

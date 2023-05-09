@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private MovementDetailsSO movementDetails;
 
     private Player player;
+    private bool leftMouseDownPreviousFrame = false;
     private int currentWeaponIndex = 1;
     private float moveSpeed;
     private Coroutine playerRollCoroutine;
@@ -44,9 +45,9 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-
-    // Set the player starting weapon
-
+    
+    /// Set the player starting weapon
+    
     private void SetStartingWeapon()
     {
         int index = 1;
@@ -62,9 +63,9 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-
-    // Set player animator speed to match movement speed
-
+    
+    /// Set player animator speed to match movement speed
+    
     private void SetPlayerAnimationSpeed()
     {
         // Set animator speed to match movement speed
@@ -86,16 +87,16 @@ public class PlayerControl : MonoBehaviour
         PlayerRollCooldownTimer();
     }
 
-
-    // Player movement input
-
+    
+    /// Player movement input
+    
     private void MovementInput()
     {
         // Get movement input
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
         float verticalMovement = Input.GetAxisRaw("Vertical");
         bool rightMouseButtonDown = Input.GetMouseButtonDown(1);
-        bool spaceKeyButtonDown = Input.GetKeyDown(KeyCode.Space);
+        bool spaceKeyDown = Input.GetKeyDown(KeyCode.Space);
 
         // Create a direction vector based on the input
         Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
@@ -109,7 +110,7 @@ public class PlayerControl : MonoBehaviour
         // If there is movement either move or roll
         if (direction != Vector2.zero)
         {
-            if (!spaceKeyButtonDown)
+            if (!spaceKeyDown)
             {
                 // trigger movement event
                 player.movementByVelocityEvent.CallMovementByVelocityEvent(direction, moveSpeed);
@@ -128,15 +129,17 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-
-    // Player roll
+    
+    /// Player roll
+    
     private void PlayerRoll(Vector3 direction)
     {
         playerRollCoroutine = StartCoroutine(PlayerRollRoutine(direction));
     }
 
-
-    // Player roll coroutine
+    
+    /// Player roll coroutine
+    
     private IEnumerator PlayerRollRoutine(Vector3 direction)
     {
         // minDistance used to decide when to exit coroutine loop
@@ -171,10 +174,10 @@ public class PlayerControl : MonoBehaviour
             playerRollCooldownTimer -= Time.deltaTime;
         }
     }
+
     
+    /// Weapon Input
     
-    
-    // Weapon Input
     private void WeaponInput()
     {
         Vector3 weaponDirection;
@@ -183,14 +186,15 @@ public class PlayerControl : MonoBehaviour
 
         // Aim weapon input
         AimWeaponInput(out weaponDirection, out weaponAngleDegrees, out playerAngleDegrees, out playerAimDirection);
-        
+
         // Fire weapon input
         FireWeaponInput(weaponDirection, weaponAngleDegrees, playerAngleDegrees, playerAimDirection);
-        
+
+        // Switch weapon input
         SwitchWeaponInput();
-        
+
+        // Reload weapon input
         ReloadWeaponInput();
-        
     }
 
     private void AimWeaponInput(out Vector3 weaponDirection, out float weaponAngleDegrees, out float playerAngleDegrees, out AimDirection playerAimDirection)
@@ -217,17 +221,21 @@ public class PlayerControl : MonoBehaviour
         player.aimWeaponEvent.CallAimWeaponEvent(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
     }
 
-    
     private void FireWeaponInput(Vector3 weaponDirection, float weaponAngleDegrees, float playerAngleDegrees, AimDirection playerAimDirection)
     {
         // Fire when left mouse button is clicked
         if (Input.GetMouseButton(0))
         {
             // Trigger fire weapon event
-            player.fireWeaponEvent.CallFireWeaponEvent(true, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+            player.fireWeaponEvent.CallFireWeaponEvent(true, leftMouseDownPreviousFrame, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+            leftMouseDownPreviousFrame = true;
+        }
+        else
+        {
+            leftMouseDownPreviousFrame = false;
         }
     }
-    
+
     private void SwitchWeaponInput()
     {
         // Switch weapon if mouse scroll wheel selecetd
@@ -297,8 +305,7 @@ public class PlayerControl : MonoBehaviour
         }
 
     }
-    
-    
+
     private void SetWeaponByIndex(int weaponIndex)
     {
         if (weaponIndex - 1 < player.weaponList.Count)
@@ -307,7 +314,7 @@ public class PlayerControl : MonoBehaviour
             player.setActiveWeaponEvent.CallSetActiveWeaponEvent(player.weaponList[weaponIndex - 1]);
         }
     }
-    
+
     private void NextWeapon()
     {
         currentWeaponIndex++;
@@ -332,7 +339,8 @@ public class PlayerControl : MonoBehaviour
 
         SetWeaponByIndex(currentWeaponIndex);
     }
-    
+
+
     private void ReloadWeaponInput()
     {
         Weapon currentWeapon = player.activeWeapon.GetCurrentWeapon();
@@ -375,10 +383,10 @@ public class PlayerControl : MonoBehaviour
             isPlayerRolling = false;
         }
     }
+
     
-    /// <summary>
     /// Set the current weapon to be first in the player weapon list
-    /// </summary>
+    
     private void SetCurrentWeaponToFirstInTheList()
     {
         // Create new temporary list
