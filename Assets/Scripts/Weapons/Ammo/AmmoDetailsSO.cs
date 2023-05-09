@@ -39,6 +39,15 @@ public class AmmoDetailsSO : ScriptableObject
     [Tooltip("If the ammo has a charge time then specify what material should be used to render the ammo while charging")]
     #endregion
     public Material ammoChargeMaterial;
+    
+    #region Header AMMO HIT EFFECT
+    [Space(10)]
+    [Header("AMMO HIT EFFECT")]
+    #endregion
+    #region Tooltip
+    [Tooltip("The scriptable object that defines the parameters for the hit effect prefab")]
+    #endregion
+    public AmmoHitEffectSO ammoHitEffect;
 
     #region Header AMMO BASE PARAMETERS
     [Space(10)]
