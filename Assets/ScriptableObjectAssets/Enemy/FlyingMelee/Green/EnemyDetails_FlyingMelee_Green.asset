@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06fe79e576d918438bf4d608be581dd, type: 3}
+  m_Name: EnemyDetails_FlyingMelee_Green
+  m_EditorClassIdentifier: 
+  enemyName: FlyingMelee
+  enemyPrefab: {fileID: 8102840453647172440, guid: 95ba1087a4121c849be6a09f01a49dc3, type: 3}
