@@ -20,6 +20,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8ffb47bd3671aba49a1e666e61cf8d5d, type: 3}
     - target: {fileID: 1599460005660746227, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599460005660746227, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -27,6 +31,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1537717885, guid: f01d8d6cf6a2a7b418ae6256bc2aae39, type: 3}
+    - target: {fileID: 4615365049159560298, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4680619667704721518, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5716055796321251012, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -71,6 +83,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748052620723082893, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ad7e451c22741a7419e6cda440974c15, type: 2}
     - target: {fileID: 5804072582127109164, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
@@ -139,9 +155,25 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
       value: 1.755181
       objectReference: {fileID: 0}
+    - target: {fileID: 6566317741161744780, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566317741161744780, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915149789045815389, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6915149789045815389, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7904506414333060632, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_Name
-      value: GunBoss_Green
+      value: GunBoss
       objectReference: {fileID: 0}
     - target: {fileID: 9093869376820704779, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_Size.x
@@ -155,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 8ffb47bd3671aba49a1e666e61cf8d5d, type: 3}
+    - target: {fileID: 9093869376820704779, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9093869376820704779, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
