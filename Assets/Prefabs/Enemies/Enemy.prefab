@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 4496263169734104670}
   - component: {fileID: 6994933404200328092}
   - component: {fileID: 3143272031329071797}
+  - component: {fileID: 5748052620723082893}
   - component: {fileID: 5573449851891740176}
   - component: {fileID: 3572025246790164756}
   - component: {fileID: 5804072582127109164}
@@ -434,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDetails: {fileID: 0}
   spriteRendererArray: []
+  animator: {fileID: 0}
 --- !u!210 &6994933404200328092
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -497,6 +499,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!95 &5748052620723082893
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7904506414333060632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &5573449851891740176
 Rigidbody2D:
   serializedVersion: 4
