@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.42301533
       objectReference: {fileID: 0}
+    - target: {fileID: 4496263169734104670, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: d84a58307a5bc1a42ae8e74f558f879e, type: 2}
     - target: {fileID: 5716055796321251012, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -123,6 +127,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
       value: 0.8754698
       objectReference: {fileID: 0}
+    - target: {fileID: 7564584332933987587, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 2e16d842494dd7f43a14109b90c76880, type: 2}
     - target: {fileID: 7904506414333060632, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_Name
       value: FlyingMelee_Blue
