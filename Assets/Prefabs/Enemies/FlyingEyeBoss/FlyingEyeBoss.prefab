@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -864086906, guid: 844ea48cced863640857f43aca3b8d76, type: 3}
+    - target: {fileID: 4496263169734104670, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 8dafcecb4223d8f4dbf782ce16d70f3b, type: 2}
     - target: {fileID: 5716055796321251012, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
       value: 0.91442657
       objectReference: {fileID: 0}
+    - target: {fileID: 7564584332933987587, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e8115e071467e44686956673a6ea058, type: 2}
     - target: {fileID: 7904506414333060632, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_Name
       value: FlyingEyeBoss

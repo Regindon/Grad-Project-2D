@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be0fdb13b1e8d94c8c72b6818fdd15f, type: 3}
   m_Name: Room_MediumRoom_Level2_1
   m_EditorClassIdentifier: 
-  guid: 
+  guid: d5fc2d6b1af5047469b1e6d845cadd83
   prefab: {fileID: 2039344565743812765, guid: 8fdf11bf6cafa9a4b9a3a0a6d15ebd94, type: 3}
-  previousPrefab: {fileID: 0}
+  previousPrefab: {fileID: 2039344565743812765, guid: 8fdf11bf6cafa9a4b9a3a0a6d15ebd94, type: 3}
   roomNodeType: {fileID: 11400000, guid: 37a56ce6960a49240b043625ea2311a9, type: 2}
   lowerBounds: {x: -10, y: -13}
   upperBounds: {x: 11, y: 11}
@@ -54,3 +54,24 @@ MonoBehaviour:
   spawnPositionArray:
   - {x: -2, y: -3}
   - {x: 5, y: -3}
+  enemiesByLevelList:
+  - dungeonLevel: {fileID: 11400000, guid: 979f845c3afdb3b43b902d560e96a931, type: 2}
+    spawnableObjectRatioList:
+    - dungeonObject: {fileID: 11400000, guid: 4170c68d37edde847902333e0ef8a6d2, type: 2}
+      ratio: 5
+    - dungeonObject: {fileID: 11400000, guid: 73231f78683f2274b9ec5fdd2281fe32, type: 2}
+      ratio: 6
+    - dungeonObject: {fileID: 11400000, guid: 8dafcecb4223d8f4dbf782ce16d70f3b, type: 2}
+      ratio: 6
+    - dungeonObject: {fileID: 11400000, guid: 07b46614d429c364487911b52d0cf1c8, type: 2}
+      ratio: 3
+    - dungeonObject: {fileID: 11400000, guid: d84a58307a5bc1a42ae8e74f558f879e, type: 2}
+      ratio: 3
+  roomEnemySpawnParametersList:
+  - dungeonLevel: {fileID: 11400000, guid: 979f845c3afdb3b43b902d560e96a931, type: 2}
+    minTotalEnemiesToSpawn: 4
+    maxTotalEnemiesToSpawn: 8
+    minConcurrentEnemies: 3
+    maxConcurrentEnemies: 6
+    minSpawnInterval: 2
+    maxSpawnInterval: 5

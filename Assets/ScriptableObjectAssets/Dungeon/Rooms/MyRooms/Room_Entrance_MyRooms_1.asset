@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be0fdb13b1e8d94c8c72b6818fdd15f, type: 3}
   m_Name: Room_Entrance_MyRooms_1
   m_EditorClassIdentifier: 
-  guid: 
+  guid: 4b84aacd410c314489a14b786d962b8c
   prefab: {fileID: 2039344565743812765, guid: bc5e36f4281343d429bc45c469839385, type: 3}
-  previousPrefab: {fileID: 0}
+  previousPrefab: {fileID: 2039344565743812765, guid: bc5e36f4281343d429bc45c469839385, type: 3}
   roomNodeType: {fileID: 11400000, guid: 5537b4870f0f453488d78f37fe9474e6, type: 2}
   lowerBounds: {x: -10, y: -10}
   upperBounds: {x: 9, y: 9}
@@ -54,3 +54,5 @@ MonoBehaviour:
   spawnPositionArray:
   - {x: 0, y: -4}
   - {x: 0, y: 3}
+  enemiesByLevelList: []
+  roomEnemySpawnParametersList: []

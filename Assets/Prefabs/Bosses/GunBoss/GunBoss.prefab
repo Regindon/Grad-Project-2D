@@ -31,6 +31,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1537717885, guid: f01d8d6cf6a2a7b418ae6256bc2aae39, type: 3}
+    - target: {fileID: 4496263169734104670, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 7723e7ab3cdf690418438bd870887ef9, type: 2}
     - target: {fileID: 4615365049159560298, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -171,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7564584332933987587, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: f2a9d833b3db27f41874f310d89a6586, type: 2}
     - target: {fileID: 7904506414333060632, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_Name
       value: GunBoss

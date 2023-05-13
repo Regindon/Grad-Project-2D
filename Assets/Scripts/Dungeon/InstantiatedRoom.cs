@@ -313,5 +313,30 @@ public class InstantiatedRoom : MonoBehaviour
         collisionTilemap.gameObject.GetComponent<TilemapRenderer>().enabled = false;
 
     }
+    
+     
+    // Disable the room trigger collider that is used to trigger when the player enters a room
+     
+    public void DisableRoomCollider()
+    {
+        boxCollider2D.enabled = false;
+    }
+
+    
+    // Lock the room doors
+    
+    public void LockDoors()
+    {
+        Door[] doorArray = GetComponentsInChildren<Door>();
+
+        // Trigger lock doors
+        foreach (Door door in doorArray)
+        {
+            door.LockDoor();
+        }
+
+        // Disable room trigger collider
+        DisableRoomCollider();
+    }
 
 }
