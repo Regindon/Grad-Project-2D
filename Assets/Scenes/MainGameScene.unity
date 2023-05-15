@@ -1021,6 +1021,9 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 4415662781196785764, guid: 4f9765fedd6669846b0df61b48ac0a62, type: 3}
     componentType: AmmoHitEffect
+  - poolSize: 50
+    prefab: {fileID: 2193914321262673151, guid: 70c3d442946eabf4fb96c4b0fce24e98, type: 3}
+    componentType: IFireable
 --- !u!4 &700395614
 Transform:
   m_ObjectHideFlags: 0
@@ -2272,7 +2275,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2085154381}
   - component: {fileID: 2085154380}
-  - component: {fileID: 2085154382}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2314,15 +2316,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2085154382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085154379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cf2f1b8c13e94445baa52de872bba67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
