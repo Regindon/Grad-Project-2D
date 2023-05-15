@@ -1036,7 +1036,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1066,7 +1066,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1746,7 +1746,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2023,18 +2023,18 @@ Tilemap:
     m_Data: {fileID: 1470896218, guid: bfd54b1776c2eb143a8c561bde984c83, type: 3}
   - m_RefCount: 26
     m_Data: {fileID: 682515957, guid: bfd54b1776c2eb143a8c561bde984c83, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1459004232, guid: bfd54b1776c2eb143a8c561bde984c83, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1832716253, guid: bfd54b1776c2eb143a8c561bde984c83, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1602228860, guid: bfd54b1776c2eb143a8c561bde984c83, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -562500621, guid: 2af5deee97ed063418e8b153f6d16e3a, type: 3}
   - m_RefCount: 2
@@ -27296,7 +27296,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 12.5}
+  m_Offset: {x: -0.38610077, y: 12.955591}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -27307,7 +27307,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.5, y: 31.5}
+  m_Size: {x: 48.880356, y: 27.741375}
   m_EdgeRadius: 0
 --- !u!114 &2283895145187812778
 MonoBehaviour:
