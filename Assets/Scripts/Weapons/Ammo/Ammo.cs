@@ -55,18 +55,32 @@ public class Ammo : MonoBehaviour, IFireable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Deal Damage To Collision Object
+        DealDamage(collision);
+
         // Show ammo hit effect
         AmmoHitEffect();
 
-        
         DisableAmmo();
     }
 
-    
+    private void DealDamage(Collider2D collision)
+    {
+        Health health = collision.GetComponent<Health>();
+
+        if (health != null)
+        {
+            health.TakeDamage(ammoDetails.ammoDamage);
+        }
+
+    }
+
+
+    /// <summary>
     /// Initialise the ammo being fired - using the ammodetails, the aimangle, weaponAngle, and
     /// weaponAimDirectionVector. If this ammo is part of a pattern the ammo movement can be
     /// overriden by setting overrideAmmoMovement to true
-
+    /// </summary>
     public void InitialiseAmmo(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, float ammoSpeed, Vector3 weaponAimDirectionVector, bool overrideAmmoMovement = false)
     {
         #region Ammo
@@ -130,10 +144,10 @@ public class Ammo : MonoBehaviour, IFireable
 
     }
 
-   
+    /// <summary>
     /// Set ammo fire direction and angle based on the input angle and direction adjusted by the
     /// random spread
-    
+    /// </summary>
     private void SetFireDirection(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, Vector3 weaponAimDirectionVector)
     {
         // calculate random spread angle between min and max
@@ -162,16 +176,17 @@ public class Ammo : MonoBehaviour, IFireable
 
     }
 
-    
+    /// <summary>
     /// Disable the ammo - thus returning it to the object pool
-    
+    /// </summary>
     private void DisableAmmo()
     {
         gameObject.SetActive(false);
     }
-    
+
+    /// <summary>
     /// Display the ammo hit effect
-    
+    /// </summary>
     private void AmmoHitEffect()
     {
         // Process if a hit effect has been specified

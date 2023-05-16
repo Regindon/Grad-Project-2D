@@ -322,6 +322,12 @@ public class InstantiatedRoom : MonoBehaviour
         boxCollider2D.enabled = false;
     }
 
+   
+    // Enable the room trigger collider that is used to trigger when the player enters a room
+    public void EnableRoomCollider()
+    {
+        boxCollider2D.enabled = true;
+    }
     
     // Lock the room doors
     
@@ -337,6 +343,33 @@ public class InstantiatedRoom : MonoBehaviour
 
         // Disable room trigger collider
         DisableRoomCollider();
+    }
+    
+    // Unlock the room doors
+    public void UnlockDoors(float doorUnlockDelay)
+    {
+        StartCoroutine(UnlockDoorsRoutine(doorUnlockDelay));
+    }
+
+    
+    
+    
+    // Unlock the room doors routine
+    private IEnumerator UnlockDoorsRoutine(float doorUnlockDelay)
+    {
+        if (doorUnlockDelay > 0f)
+            yield return new WaitForSeconds(doorUnlockDelay);
+
+        Door[] doorArray = GetComponentsInChildren<Door>();
+
+        // Trigger open doors
+        foreach (Door door in doorArray)
+        {
+            door.UnlockDoor();
+        }
+
+        // Enable room trigger collider
+        EnableRoomCollider();
     }
 
 }

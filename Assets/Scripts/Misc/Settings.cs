@@ -17,7 +17,7 @@ public static class Settings
     #region ROOM SETTINGS
     public const float fadeInTime = 0.5f; // time to fade in the room
     public const int maxChildCorridors = 3; // Max number of child corridors leading from a room. - maximum should be 3 although this is not recommended since it can cause the dungeon building to fail since the rooms are more likely to not fit together;
-
+    public const float doorUnlockDelay = 1f;
     #endregion
 
 
@@ -36,9 +36,10 @@ public static class Settings
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollDown = Animator.StringToHash("rollDown");
     public static float baseSpeedForPlayerAnimations = 8f;
-    
+
     // Animator parameters - Enemy
     public static float baseSpeedForEnemyAnimations = 3f;
+
 
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
@@ -63,7 +64,10 @@ public static class Settings
 
     #endregion
 
-    
+    #region ENEMY PARAMETERS
+    public const int defaultEnemyHealth = 20;
+    #endregion
+
     #region UI PARAMETERS
     public const float uiAmmoIconSpacing = 4f;
     #endregion

@@ -23,9 +23,9 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
     }
 
-    
-    // Process a change in room
-    
+    /// <summary>
+    /// Process a change in room
+    /// </summary>
     private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
     {
         enemiesSpawnedSoFar = 0;
@@ -66,9 +66,9 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         SpawnEnemies();
     }
 
-    
-    // Spawn the enemies
-    
+    /// <summary>
+    /// Spawn the enemies
+    /// </summary>
     private void SpawnEnemies()
     {
         // Set gamestate engaging enemies
@@ -81,9 +81,9 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         StartCoroutine(SpawnEnemiesRoutine());
     }
 
-    
-    // Spawn the enemies coroutine
-    
+    /// <summary>
+    /// Spawn the enemies coroutine
+    /// </summary>
     private IEnumerator SpawnEnemiesRoutine()
     {
         Grid grid = currentRoom.instantiatedRoom.grid;
@@ -113,25 +113,25 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         }
     }
 
-    
-    // Get a random spawn interval between the minimum and maximum values
-    
+    /// <summary>
+    /// Get a random spawn interval between the minimum and maximum values
+    /// </summary>
     private float GetEnemySpawnInterval()
     {
         return (Random.Range(roomEnemySpawnParameters.minSpawnInterval, roomEnemySpawnParameters.maxSpawnInterval));
     }
 
-    
-    // Get a random number of concurrent enemies between the minimum and maximum values
-    
+    /// <summary>
+    /// Get a random number of concurrent enemies between the minimum and maximum values
+    /// </summary>
     private int GetConcurrentEnemies()
     {
         return (Random.Range(roomEnemySpawnParameters.minConcurrentEnemies, roomEnemySpawnParameters.maxConcurrentEnemies));
     }
 
-    
-    // Create an enemy in the specified position
-    
+    /// <summary>
+    /// Create an enemy in the specified position
+    /// </summary>
     private void CreateEnemy(EnemyDetailsSO enemyDetails, Vector3 position)
     {
         // keep track of the number of enemies spawned so far 
@@ -149,6 +149,45 @@ public class EnemySpawner : SingletonMonobehaviour<EnemySpawner>
         // Initialize Enemy
         enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
+        // subscribe to enemy destroyed event
+        enemy.GetComponent<DestroyedEvent>().OnDestroyed += Enemy_OnDestroyed;
+
+    }
+
+    /// <summary>
+    /// Process enemy destroyed
+    /// </summary>
+    private void Enemy_OnDestroyed(DestroyedEvent destroyedEvent)
+    {
+        // Unsubscribe from event
+        destroyedEvent.OnDestroyed -= Enemy_OnDestroyed;
+
+        // reduce current enemy count
+        currentEnemyCount--;
+
+        if (currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
+        {
+            currentRoom.isClearedOfEnemies = true;
+
+            // Set game state
+            if (GameManager.Instance.gameState == GameState.engagingEnemies)
+            {
+                GameManager.Instance.gameState = GameState.playingLevel;
+                GameManager.Instance.previousGameState = GameState.engagingEnemies;
+            }
+
+            else if (GameManager.Instance.gameState == GameState.engagingBoss)
+            {
+                GameManager.Instance.gameState = GameState.bossStage;
+                GameManager.Instance.previousGameState = GameState.engagingBoss;
+            }
+
+            // unlock doors
+            currentRoom.instantiatedRoom.UnlockDoors(Settings.doorUnlockDelay);
+
+            // Trigger room enemies defeated event
+            StaticEventHandler.CallRoomEnemiesDefeatedEvent(currentRoom);
+        }
     }
 
 }
