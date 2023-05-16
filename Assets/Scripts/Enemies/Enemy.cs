@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 #region REQUIRE COMPONENTS
+[RequireComponent(typeof(HealthEvent))]
+[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(DestroyedEvent))]
+[RequireComponent(typeof(Destroyed))]
 [RequireComponent(typeof(EnemyWeaponAI))]
 [RequireComponent(typeof(AimWeaponEvent))]
 [RequireComponent(typeof(AimWeapon))]
@@ -33,6 +37,8 @@ using UnityEngine.Rendering;
 public class Enemy : MonoBehaviour
 {
     [HideInInspector] public EnemyDetailsSO enemyDetails;
+    private HealthEvent healthEvent;
+    private Health health;
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
     [HideInInspector] public FireWeaponEvent fireWeaponEvent;
     private FireWeapon fireWeapon;
@@ -49,6 +55,8 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         // Load components
+        healthEvent = GetComponent<HealthEvent>();
+        health = GetComponent<Health>();
         aimWeaponEvent = GetComponent<AimWeaponEvent>();
         fireWeaponEvent = GetComponent<FireWeaponEvent>();
         fireWeapon = GetComponent<FireWeapon>();
@@ -63,14 +71,49 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    
-    // Initialise the enemy
-    
+    private void OnEnable()
+    {
+        //subscribe to health event
+        healthEvent.OnHealthChanged += HealthEvent_OnHealthLost;
+    }
+
+    private void OnDisable()
+    {
+        //subscribe to health event
+        healthEvent.OnHealthChanged -= HealthEvent_OnHealthLost;
+    }
+
+    /// <summary>
+    /// Handle health lost event
+    /// </summary>
+    private void HealthEvent_OnHealthLost(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
+    {
+        if (healthEventArgs.healthAmount <= 0)
+        {
+            EnemyDestroyed();
+        }
+    }
+
+    /// <summary>
+    /// Enemy destroyed
+    /// </summary>
+    private void EnemyDestroyed()
+    {
+        DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        destroyedEvent.CallDestroyedEvent();
+    }
+
+
+    /// <summary>
+    /// Initialise the enemy
+    /// </summary>
     public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
     {
         this.enemyDetails = enemyDetails;
 
         SetEnemyMovementUpdateFrame(enemySpawnNumber);
+
+        SetEnemyStartingHealth(dungeonLevel);
 
         SetEnemyStartingWeapon();
 
@@ -80,18 +123,36 @@ public class Enemy : MonoBehaviour
         StartCoroutine(MaterializeEnemy());
     }
 
-    
-    // Set enemy movement update frame
-    
+    /// <summary>
+    /// Set enemy movement update frame
+    /// </summary>
     private void SetEnemyMovementUpdateFrame(int enemySpawnNumber)
     {
         // Set frame number that enemy should process it's updates
         enemyMovementAI.SetUpdateFrameNumber(enemySpawnNumber % Settings.targetFrameRateToSpreadPathfindingOver);
     }
 
-    
-    // Set enemy starting weapon as per the weapon details SO
-    
+
+    /// <summary>
+    /// Set the starting health for the enemy
+    /// </summary>
+    private void SetEnemyStartingHealth(DungeonLevelSO dungeonLevel)
+    {
+        // Get the enemy health for the dungeon level
+        foreach (EnemyHealthDetails enemyHealthDetails in enemyDetails.enemyHealthDetailsArray)
+        {
+            if (enemyHealthDetails.dungeonLevel == dungeonLevel)
+            {
+                health.SetStartingHealth(enemyHealthDetails.enemyHealthAmount);
+                return;
+            }
+        }
+        health.SetStartingHealth(Settings.defaultEnemyHealth);
+    }
+
+    /// <summary>
+    /// Set enemy starting weapon as per the weapon details SO
+    /// </summary>
     private void SetEnemyStartingWeapon()
     {
         // Process if enemy has a weapon
@@ -105,9 +166,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    
-    // Set enemy animator speed to match movement speed
-    
+    /// <summary>
+    /// Set enemy animator speed to match movement speed
+    /// </summary>
     private void SetEnemyAnimationSpeed()
     {
         // Set animator speed to match movement speed
