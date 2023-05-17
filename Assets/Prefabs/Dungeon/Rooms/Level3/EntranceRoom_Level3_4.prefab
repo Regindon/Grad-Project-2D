@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 2039344565743812767}
   - component: {fileID: 2039344565743812764}
   m_Layer: 12
-  m_Name: LargeRoom_Level3_2
+  m_Name: EntranceRoom_Level3_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
