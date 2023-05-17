@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e92a811579f1d6409d597dcae89440a
-      internalID: -902467464
+      spriteID: 838842bdfaa88e8448b83f662948a8b9
+      internalID: 1893107409
       vertices: []
       indices: 
       edges: []
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d44cd8d0d745b8244a9e116867e08f2c
-      internalID: -1126794922
+      spriteID: fdb91fe62bb5d11498f27963422ee933
+      internalID: -110392912
       vertices: []
       indices: 
       edges: []
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e505cf31de991d94c9e42e3c9bfbecd3
-      internalID: -1088017234
+      spriteID: f6a8dbeb7dc15754f8b423a65d43dbae
+      internalID: 607017914
       vertices: []
       indices: 
       edges: []
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1716cc78fa699194cbe0c39ea50d424f
-      internalID: -1308295804
+      spriteID: acd44944efc57b24b93af1eb521b6038
+      internalID: -1752271730
       vertices: []
       indices: 
       edges: []
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92cae3ed318bf44438791ad2cfea466f
-      internalID: -2038363499
+      spriteID: 92d6092326553ce428e7865ccb66ee2e
+      internalID: -581155639
       vertices: []
       indices: 
       edges: []
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c02435ac8f6da0d4a96426d291bbade3
-      internalID: -1483632593
+      spriteID: a78b386d45cf91343ae3a32af9a53097
+      internalID: 472029494
       vertices: []
       indices: 
       edges: []
@@ -288,12 +288,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      swatboss_RunUpRight_0: -902467464
-      swatboss_RunUpRight_2: -1088017234
-      swatboss_RunUpRight_3: -1308295804
-      swatboss_RunUpRight_5: -1483632593
-      swatboss_RunUpRight_1: -1126794922
-      swatboss_RunUpRight_4: -2038363499
+      swatboss_RunUpRight_0: 1893107409
+      swatboss_RunUpRight_2: 607017914
+      swatboss_RunUpRight_3: -1752271730
+      swatboss_RunUpRight_5: 472029494
+      swatboss_RunUpRight_1: -110392912
+      swatboss_RunUpRight_4: -581155639
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a06fe79e576d918438bf4d608be581dd, type: 3}
-  m_Name: EnemyDetails_GunBoss_Pistol
+  m_Name: EnemyDetails_ZombieBoss_Shotgun
   m_EditorClassIdentifier: 
-  enemyName: GunBoss
-  enemyPrefab: {fileID: 5419054849331095653, guid: 59791573d9da6d848b5e4a8d9611cdf9, type: 3}
+  enemyName: ZombieBoss
+  enemyPrefab: {fileID: 1534134797524163963, guid: 792c00be4b1a99141a2d1258b1aa2360, type: 3}
   chaseDistance: 50
   enemyStandardMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   enemyMaterializeTime: 2
