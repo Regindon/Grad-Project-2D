@@ -31,6 +31,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1537717885, guid: f01d8d6cf6a2a7b418ae6256bc2aae39, type: 3}
+    - target: {fileID: 3572025246790164756, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_Radius
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572025246790164756, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572025246790164756, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4496263169734104670, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: enemyDetails
       value: 
@@ -91,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ad7e451c22741a7419e6cda440974c15, type: 2}
+    - target: {fileID: 5804072582127109164, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5804072582127109164, guid: e09732c781a358a4d81f2fb6ab665424, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
