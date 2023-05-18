@@ -27,11 +27,11 @@ MonoBehaviour:
     doorwayCopyTileHeight: 5
     isConnected: 0
     isUnavailable: 0
-  - position: {x: 19, y: 0}
+  - position: {x: 20, y: 0}
     orientation: 1
     doorPrefab: {fileID: 7050632422980519596, guid: 7a876a3a1063e554a84a4cdbeba5f72a, type: 3}
     doorwayStartCopyPosition: {x: 16, y: 4}
-    doorwayCopyTileWidth: 4
+    doorwayCopyTileWidth: 5
     doorwayCopyTileHeight: 8
     isConnected: 0
     isUnavailable: 0
@@ -43,11 +43,11 @@ MonoBehaviour:
     doorwayCopyTileHeight: 6
     isConnected: 0
     isUnavailable: 0
-  - position: {x: -4, y: 0}
+  - position: {x: -5, y: 0}
     orientation: 3
     doorPrefab: {fileID: 7050632422980519596, guid: 7a876a3a1063e554a84a4cdbeba5f72a, type: 3}
-    doorwayStartCopyPosition: {x: -4, y: 4}
-    doorwayCopyTileWidth: 3
+    doorwayStartCopyPosition: {x: -5, y: 4}
+    doorwayCopyTileWidth: 4
     doorwayCopyTileHeight: 8
     isConnected: 0
     isUnavailable: 0
