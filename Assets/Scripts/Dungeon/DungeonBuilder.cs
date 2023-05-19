@@ -594,6 +594,16 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             instantiatedRoom.Initialise(roomGameobject);
 
             room.instantiatedRoom = instantiatedRoom;
+
+            
+            /*
+            //debug code for trying
+            if (!room.roomNodeType.isBossRoom)
+            {
+                room.isClearedOfEnemies = true;
+            }
+            */
+            
         }
     }
 

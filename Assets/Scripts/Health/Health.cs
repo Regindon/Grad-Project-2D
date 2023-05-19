@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,6 +6,15 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Health : MonoBehaviour
 {
+    #region Header References
+    [Space(10)]
+    [Header("References")]
+    #endregion
+    #region Tooltip
+    [Tooltip("Populate with the HealthBar component on the HealthBar gameobject")]
+    #endregion
+    [SerializeField] private HealthBar healthBar;
+    
     private int startingHealth;
     private int currentHealth;
     private HealthEvent healthEvent;
@@ -18,6 +28,7 @@ public class Health : MonoBehaviour
 
     [HideInInspector] public bool isDamageable = true;
     [HideInInspector] public Enemy enemy;
+    [HideInInspector] public GameState gameState;
 
     private void Awake()
     {
@@ -33,6 +44,20 @@ public class Health : MonoBehaviour
         // Attempt to load enemy / player components
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
+
+        bool enableEnemyBossHealthBar;
+
+        if (gameState == GameState.bossStage || gameState == GameState.engagingBoss)
+        {
+            enableEnemyBossHealthBar = true;
+            Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
+        }
+        else
+        {
+            enableEnemyBossHealthBar = false;
+            Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
+        }
+        
 
 
         // Get player / enemy hit immunity details
@@ -54,7 +79,23 @@ public class Health : MonoBehaviour
                 spriteRenderer = enemy.spriteRendererArray[0];
             }
         }
+        
+        // Enable the health bar if required
+        if (enemy != null && enemy.enemyDetails.isHealthBarDisplayed == true && healthBar != null && enableEnemyBossHealthBar)
+        {
+            Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
+            healthBar.EnableHealthBar();
+            
+        }
+        else if (healthBar != null || !enableEnemyBossHealthBar)
+        {
+            Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
+            healthBar.DisableHealthBar();
+        }
     }
+
+    
+
 
     /// <summary>
     /// Public method called when damage is taken
@@ -72,6 +113,12 @@ public class Health : MonoBehaviour
             CallHealthEvent(damageAmount);
 
             PostHitImmunity();
+            
+            // Set health bar as the percentage of health remaining
+            if (healthBar != null)
+            {
+                healthBar.SetHealthBarValue((float)currentHealth / (float)startingHealth);
+            }
         }
     }
 
