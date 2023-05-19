@@ -239,7 +239,7 @@ public class WeaponStatusUI : MonoBehaviour
         StopReloadWeaponCoroutine();
         UpdateReloadText(weapon);
 
-        reloadWeaponCoroutine = StartCoroutine(UpdateWeaponReloadBarRoutine(weapon));
+        //reloadWeaponCoroutine = StartCoroutine(UpdateWeaponReloadBarRoutine(weapon));
     }
 
     /// <summary>

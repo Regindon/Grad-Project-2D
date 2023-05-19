@@ -6,33 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level1/EntranceRoom_Level1_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level1/EntranceRoom_Level1_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level1/EntranceRoom_Level1_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level1/EntranceRoom_Level1_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/LargeRoom_Level2_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/MediumRoom_Level2_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/BossRoom_MyRooms_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/Entrance_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/Entrance_MyRooms_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/Entrance_MyRooms_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/Entrance_MyRooms_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/LargeRoom_MyRooms_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1Assets/Textures/Sprites/UI/HealthBarFill.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1Assets/Textures/Sprites/UI/HealthBarFill.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Levels/DungeonLevel_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Levels/DungeonLevel_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_Entrance_Level1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_Entrance_Level1_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level2/Room_Entrance_Level2_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_BossRoom_MyRooms_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_Entrance_MyRooms_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_LargeRoom_MyRooms_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/DestroyedEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/DestroyedEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StaticEvents/StaticEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StaticEvents/StaticEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WeaponStatusUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/WeaponStatusUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +80,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ScoreUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WeaponStatusUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/SpawnableObjectRatio.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,7 +132,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/Prototype4_Build\Grad-Project-2D.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Builds/DenemeBuild\Grad-Project-2D.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="E:\GitHub Projects\Grad-Project-2D\Builds\Prototype_Build" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -275,6 +262,7 @@
       <workItem from="1684197398377" duration="2892000" />
       <workItem from="1684272852241" duration="7760000" />
       <workItem from="1684427290294" duration="1364000" />
+      <workItem from="1684460534723" duration="6258000" />
     </task>
     <servers />
   </component>
