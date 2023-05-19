@@ -4,6 +4,26 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class HealthUI : MonoBehaviour
 {
+
+    #region Header OBJECT REFERENCES
+
+    [Space(10)]
+    [Header("OBJECT REFERENCES")]
+
+    #endregion
+
+    #region Tooltip
+
+    [Tooltip("Populate with the RectTransform of the child gameobject ReloadBar")]
+
+    #endregion
+
+    [SerializeField]
+    private Transform healthBar;
+    
+    
+    
+    
     private List<GameObject> healthHeartsList = new List<GameObject>();
 
     private void OnEnable()
@@ -34,6 +54,7 @@ public class HealthUI : MonoBehaviour
 
     private void SetHealthBar(HealthEventArgs healthEventArgs)
     {
+        /*
         ClearHealthBar();
 
         // Instantiate heart image prefabs
@@ -49,6 +70,11 @@ public class HealthUI : MonoBehaviour
 
             healthHeartsList.Add(heart);
         }
+        */
+        
+        float healthBarAmount = healthEventArgs.healthPercent;
+        Debug.Log(healthBarAmount);
+        healthBar.transform.localScale = new Vector3(healthBarAmount, 1f,1f);
 
     }
 }
