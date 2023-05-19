@@ -89,6 +89,14 @@ public static class HelperUtilities
 
     }
 
+    // Convert the linear volume scale to decibels
+    public static float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+
+        // formula to convert from the linear scale to the logarithmic decibel scale
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
 
     
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
