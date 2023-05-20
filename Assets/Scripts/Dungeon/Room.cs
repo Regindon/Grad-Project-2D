@@ -30,7 +30,7 @@ public class Room
     }
 
     
-    // Get the number of enemies to spawn for this room in this dungeon level
+    //get the number of enemies to spawn for this room in this dungeon level
     
     public int GetNumberOfEnemiesToSpawn(DungeonLevelSO dungeonLevel)
     {
@@ -46,7 +46,7 @@ public class Room
     }
 
     
-    // Get the room enemy spawn parameters for this dungeon level - if none found then return null
+    //get the room enemy spawn parameters for this dungeon level - if none found then return null
     
     public RoomEnemySpawnParameters GetRoomEnemySpawnParameters(DungeonLevelSO dungeonLevel)
     {

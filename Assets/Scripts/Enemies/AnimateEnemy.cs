@@ -8,62 +8,69 @@ public class AnimateEnemy : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+        
         enemy = GetComponent<Enemy>();
     }
 
     private void OnEnable()
     {
-        // Subscribe to movement event
+        //subscribe to events
         enemy.movementToPositionEvent.OnMovementToPosition += MovementToPositionEvent_OnMovementToPosition;
 
-        // Subscribe to idle event
+        
         enemy.idleEvent.OnIdle += IdleEvent_OnIdle;
 
-        // Subscribe to weapon aim event
+        
         enemy.aimWeaponEvent.OnWeaponAim += AimWeaponEvent_OnWeaponAim;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from movement event
+        //unsubscribes from events
         enemy.movementToPositionEvent.OnMovementToPosition -= MovementToPositionEvent_OnMovementToPosition;
 
-        // Unsubscribe from idle event
+        
         enemy.idleEvent.OnIdle -= IdleEvent_OnIdle;
 
-        // Unsubscribe from weapon aim event event
+        
         enemy.aimWeaponEvent.OnWeaponAim -= AimWeaponEvent_OnWeaponAim;
     }
 
-    /// <summary>
-    /// On weapon aim event handler
-    /// </summary>
+
+    
+    
+    
+    //on weapon aim event handler
     private void AimWeaponEvent_OnWeaponAim(AimWeaponEvent aimWeaponEvent, AimWeaponEventArgs aimWeaponEventArgs)
     {
         InitialiseAimAnimationParameters();
         SetAimWeaponAnimationParameters(aimWeaponEventArgs.aimDirection);
     }
 
-    /// <summary>
-    /// On movement event handler
-    /// </summary>
+
+    
+    
+    
+    //on movement event handler
     private void MovementToPositionEvent_OnMovementToPosition(MovementToPositionEvent movementToPositionEvent, MovementToPositionArgs movementToPositionArgs)
     {
         SetMovementAnimationParameters();
     }
 
-    /// <summary>
-    /// On idle event handler
-    /// </summary>
+
+    
+    
+    //on idle event handler
     private void IdleEvent_OnIdle(IdleEvent idleEvent)
     {
         SetIdleAnimationParameters();
     }
 
-    /// <summary>
-    /// Initialise aim animation parameters
-    /// </summary>
+
+    
+    
+    
+    //initialise aim animation parameters
     private void InitialiseAimAnimationParameters()
     {
         enemy.animator.SetBool(Settings.aimUp, false);
@@ -74,33 +81,38 @@ public class AnimateEnemy : MonoBehaviour
         enemy.animator.SetBool(Settings.aimDown, false);
     }
 
-    /// <summary>
-    /// Set movement animation parameters
-    /// </summary>
+
+    
+    
+    
+    //set movement animation parameters
     private void SetMovementAnimationParameters()
     {
-        // Set Moving
+        
         enemy.animator.SetBool(Settings.isIdle, false);
         enemy.animator.SetBool(Settings.isMoving, true);
     }
 
 
-    /// <summary>
-    /// Set idle animation parameters
-    /// </summary>
+
+    
+    
+    //set idle animation parameters
     private void SetIdleAnimationParameters()
     {
-        // Set idle
+        
         enemy.animator.SetBool(Settings.isMoving, false);
         enemy.animator.SetBool(Settings.isIdle, true);
     }
 
-    /// <summary>
-    /// Set aim animation parameters
-    /// </summary>
+    
+    
+    
+    
+    //Set aim animation parameters
     private void SetAimWeaponAnimationParameters(AimDirection aimDirection)
     {
-        // Set aim direction
+       
         switch (aimDirection)
         {
             case AimDirection.Up:

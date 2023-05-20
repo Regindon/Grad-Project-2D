@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +43,7 @@ using UnityEngine.Rendering;
 
 public class Player : MonoBehaviour
 {
+    #region Referances
     [HideInInspector] public PlayerDetailsSO playerDetails;
     [HideInInspector] public HealthEvent healthEvent;
     [HideInInspector] public Health health;
@@ -59,12 +61,13 @@ public class Player : MonoBehaviour
     [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
-
+    [HideInInspector] public GameState gameState;
     public List<Weapon> weaponList = new List<Weapon>();
+    
+    #endregion
 
     private void Awake()
     {
-        // Load components
         healthEvent = GetComponent<HealthEvent>();
         health = GetComponent<Health>();
         destroyedEvent = GetComponent<DestroyedEvent>();
@@ -82,96 +85,83 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
-
-
-    /// <summary>
-    /// Initialize the player
-    /// </summary>
+    
+    
+    //initialize the player
     public void Initialize(PlayerDetailsSO playerDetails)
     {
         this.playerDetails = playerDetails;
-
-        //Create player starting weapons
+        
         CreatePlayerStartingWeapons();
-
-
-        // Set player starting health
+        
         SetPlayerHealth();
     }
 
     private void OnEnable()
     {
-        // Subscribe to player health event
+        //subscribe to health event
         healthEvent.OnHealthChanged += HealthEvent_OnHealthChanged;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from player health event
+        //unsubscribe from health events
         healthEvent.OnHealthChanged -= HealthEvent_OnHealthChanged;
     }
 
-    /// <summary>
-    /// Handle health changed event
-    /// </summary>
+
+    //handle health changed event
     private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
     {
-        // If player has died
+        //if player has died
         if (healthEventArgs.healthAmount <= 0f)
         {
             destroyedEvent.CallDestroyedEvent(true, 0);
         }
 
     }
+    
 
-
-    /// <summary>
-    /// Set the player starting weapon
-    /// </summary>
+    //set the player starting weapon
     private void CreatePlayerStartingWeapons()
     {
-        // Clear list
+        //clear list
         weaponList.Clear();
 
-        // Populate weapon list from starting weapons
+        //populate weapon list from starting weapons
         foreach (WeaponDetailsSO weaponDetails in playerDetails.startingWeaponList)
         {
-            // Add weapon to player
+            //add weapon to player
             AddWeaponToPlayer(weaponDetails);
         }
     }
 
-    /// <summary>
-    /// Set player health from playerDetails SO
-    /// </summary>
+
+    //set player health from playerDetails SO
     private void SetPlayerHealth()
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);
     }
 
-    /// <summary>
-    /// Returns the player position
-    /// </summary>
+
+    //returns the player position
     public Vector3 GetPlayerPosition()
     {
         return transform.position;
     }
 
-
-    /// <summary>
-    /// Add a weapon to the player weapon dictionary
-    /// </summary>
+    
+    //add a weapon to the player weapon dictionary
     public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
     {
-        Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity, weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false };
-
-        // Add the weapon to the list
+        Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, weaponClipRemainingAmmo 
+            = weaponDetails.weaponClipAmmoCapacity, weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false };
+        
         weaponList.Add(weapon);
-
-        // Set weapon position in list
+   
         weapon.weaponListPosition = weaponList.Count;
 
-        // Set the added weapon as active
+        //set the added weapon as active
         setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
 
         return weapon;

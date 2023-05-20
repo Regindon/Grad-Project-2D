@@ -96,7 +96,7 @@ public class RoomTemplateSO : ScriptableObject
     public List<RoomEnemySpawnParameters> roomEnemySpawnParametersList;
 
     
-    // Returns the list of Entrances for the room template
+    //returns the list of Entrances for the room template
     
     public List<Doorway> GetDoorwayList()
     {
@@ -107,7 +107,7 @@ public class RoomTemplateSO : ScriptableObject
 
 #if UNITY_EDITOR
 
-    // Validate SO fields
+    
     private void OnValidate()
     {
         // Set unique GUID if empty or the prefab changes

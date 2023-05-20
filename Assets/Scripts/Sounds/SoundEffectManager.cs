@@ -12,29 +12,26 @@ public class SoundEffectManager : SingletonMonobehaviour<SoundEffectManager>
     }
 
 
-    // Play the sound effect
+    //play the sound effect
     public void PlaySoundEffect(SoundEffectSO soundEffect)
     {
-        // Play sound using a sound gameobject and component from the object pool
+        //play sound using a sound gameobject and component from the object pool
         SoundEffect sound = (SoundEffect)PoolManager.Instance.ReuseComponent(soundEffect.soundPrefab, Vector3.zero, Quaternion.identity);
         sound.SetSound(soundEffect);
         sound.gameObject.SetActive(true);
         StartCoroutine(DisableSound(sound, soundEffect.soundEffectClip.length));
 
     }
-
-
     
-    //Disable sound effect object after it has played thus returning it to the object pool
+    
+    //disable sound effect object after it has played thus returning it to the object pool
     private IEnumerator DisableSound(SoundEffect sound, float soundDuration)
     {
         yield return new WaitForSeconds(soundDuration);
         sound.gameObject.SetActive(false);
     }
-
-
     
-    // Set sounds volume
+    
     private void SetSoundsVolume(int soundsVolume)
     {
         float muteDecibels = -80f;

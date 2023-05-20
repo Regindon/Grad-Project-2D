@@ -5,7 +5,7 @@ using System;
 
 public static class StaticEventHandler 
 {
-    // Room changed event
+    //room changed event
     public static event Action<RoomChangedEventArgs> OnRoomChanged;
 
     public static void CallRoomChangedEvent(Room room)
@@ -14,7 +14,7 @@ public static class StaticEventHandler
     }
 
 
-    // Room enemies defeated event
+    //room enemies defeated event
     public static event Action<RoomEnemiesDefeatedArgs> OnRoomEnemiesDefeated;
 
     public static void CallRoomEnemiesDefeatedEvent(Room room)
@@ -22,7 +22,7 @@ public static class StaticEventHandler
         OnRoomEnemiesDefeated?.Invoke(new RoomEnemiesDefeatedArgs() { room = room });
     }
 
-    // Points scored event
+    //points scored event
     public static event Action<PointsScoredArgs> OnPointsScored;
 
     public static void CallPointsScoredEvent(int points)
@@ -30,7 +30,7 @@ public static class StaticEventHandler
         OnPointsScored?.Invoke(new PointsScoredArgs() { points = points });
     }
 
-    // Score changed event
+    //score changed event
     public static event Action<ScoreChangedArgs> OnScoreChanged;
 
     public static void CallScoreChangedEvent(long score)

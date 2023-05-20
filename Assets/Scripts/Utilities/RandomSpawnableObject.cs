@@ -15,9 +15,9 @@ public class RandomSpawnableObject<T>
     private List<chanceBoundaries> chanceBoundariesList = new List<chanceBoundaries>();
     private List<SpawnableObjectsByLevel<T>> spawnableObjectsByLevelList;
 
-    /// <summary>
-    /// Constructor
-    /// </summary>
+
+    
+    //constructor
     public RandomSpawnableObject(List<SpawnableObjectsByLevel<T>> spawnableObjectsByLevelList)
     {
         this.spawnableObjectsByLevelList = spawnableObjectsByLevelList;
@@ -32,7 +32,7 @@ public class RandomSpawnableObject<T>
 
         foreach (SpawnableObjectsByLevel<T> spawnableObjectsByLevel in spawnableObjectsByLevelList)
         {
-            // check for current level
+            //check for current level
             if (spawnableObjectsByLevel.dungeonLevel == GameManager.Instance.GetCurrentDungeonLevel())
             {
                 foreach (SpawnableObjectRatio<T> spawnableObjectRatio in spawnableObjectsByLevel.spawnableObjectRatioList)
@@ -43,8 +43,9 @@ public class RandomSpawnableObject<T>
 
                     ratioValueTotal += spawnableObjectRatio.ratio;
 
-                    // Add spawnable object to list;
-                    chanceBoundariesList.Add(new chanceBoundaries() { spawnableObject = spawnableObjectRatio.dungeonObject, lowBoundaryValue = lowerBoundary, highBoundaryValue = upperBoundary });
+                    //add spawnable object to list
+                    chanceBoundariesList.Add(new chanceBoundaries() { spawnableObject = spawnableObjectRatio.dungeonObject, 
+                        lowBoundaryValue = lowerBoundary, highBoundaryValue = upperBoundary });
 
                 }
             }
@@ -54,7 +55,7 @@ public class RandomSpawnableObject<T>
 
         int lookUpValue = Random.Range(0, ratioValueTotal);
 
-        // loop through list to get seleted random spawnable object details
+        //loop through list to get seleted random spawnable object details
         foreach (chanceBoundaries spawnChance in chanceBoundariesList)
         {
             if (lookUpValue >= spawnChance.lowBoundaryValue && lookUpValue <= spawnChance.highBoundaryValue)

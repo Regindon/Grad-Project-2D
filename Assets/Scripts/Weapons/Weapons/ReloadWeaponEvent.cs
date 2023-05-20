@@ -8,7 +8,7 @@ public class ReloadWeaponEvent : MonoBehaviour
 {
     public event Action<ReloadWeaponEvent, ReloadWeaponEventArgs> OnReloadWeapon;
     
-    // Specify the weapon to have it's clip reloaded.  If the total ammo is also to be increased then specify the topUpAmmoPercent.
+    //specify the weapon to have it's clip reloaded if the total ammo is also to be increased then specify the topUpAmmoPercent
     
     public void CallReloadWeaponEvent(Weapon weapon, int topUpAmmoPercent)
     {

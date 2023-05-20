@@ -37,7 +37,7 @@ public static class HelperUtilities
     }
     
 
-    // Get the direction vector from an angle in degrees
+    //get the direction vector from an angle in degrees
     public static Vector3 GetDirectionVectorFromAngle(float angle)
     {
         Vector3 directionVector = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle), 0f);
@@ -89,7 +89,7 @@ public static class HelperUtilities
 
     }
 
-    // Convert the linear volume scale to decibels
+    //convert the linear volume scale to decibels
     public static float LinearToDecibels(int linear)
     {
         float linearScaleRange = 20f;
@@ -97,7 +97,6 @@ public static class HelperUtilities
         // formula to convert from the linear scale to the logarithmic decibel scale
         return Mathf.Log10((float)linear / linearScaleRange) * 20f;
     }
-
     
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
     {
@@ -108,7 +107,6 @@ public static class HelperUtilities
         }
         return false;
     }
-
     
     public static bool ValidateCheckNullValue(Object thisObject, string fieldName, UnityEngine.Object objectToCheck)
     {
@@ -119,8 +117,6 @@ public static class HelperUtilities
         }
         return false;
     }
-
-
     
     public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)
     {
@@ -156,8 +152,6 @@ public static class HelperUtilities
 
         return error;
     }
-
-
     
     public static bool ValidateCheckPositiveValue(Object thisObject, string fieldName, int valueToCheck, bool isZeroAllowed)
     {
@@ -208,7 +202,6 @@ public static class HelperUtilities
         return error;
     }
 
-    
     public static bool ValidateCheckPositiveRange(Object thisObject, string fieldNameMinimum, float valueToCheckMinimum, string fieldNameMaximum, float valueToCheckMaximum, bool isZeroAllowed)
     {
         bool error = false;

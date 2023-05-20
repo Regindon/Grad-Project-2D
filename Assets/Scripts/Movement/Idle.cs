@@ -12,7 +12,6 @@ public class Idle : MonoBehaviour
 
     private void Awake()
     {
-        
         rigidBody2D = GetComponent<Rigidbody2D>();
         idleEvent = GetComponent<IdleEvent>();
 
@@ -38,7 +37,6 @@ public class Idle : MonoBehaviour
     //move rigidbody
     private void MoveRigidBody()
     {
-        
         rigidBody2D.velocity = Vector2.zero;
     }
 }
