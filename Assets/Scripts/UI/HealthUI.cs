@@ -21,9 +21,6 @@ public class HealthUI : MonoBehaviour
     [SerializeField]
     private Transform healthBar;
     
-    
-    
-    
     private List<GameObject> healthHeartsList = new List<GameObject>();
 
     private void OnEnable()

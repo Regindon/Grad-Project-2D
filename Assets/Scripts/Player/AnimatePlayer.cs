@@ -10,7 +10,7 @@ public class AnimatePlayer : MonoBehaviour
 
     private void Awake()
     {
-        //load components
+        
         player = GetComponent<Player>();
     }
 
@@ -31,8 +31,7 @@ public class AnimatePlayer : MonoBehaviour
         player.idleEvent.OnIdle -= IdleEvent_OnIdle;
         player.aimWeaponEvent.OnWeaponAim -= AimWeaponEvent_OnWeaponAim;
     }
-
-
+    
     //Event handlers
     private void MovementByVelocityEvent_OnMovementByVelocity(MovementByVelocityEvent movementByVelocityEvent, MovementByVelocityArgs movementByVelocityArgs)
     {
@@ -40,23 +39,19 @@ public class AnimatePlayer : MonoBehaviour
         SetMovementAnimationParameters();
     }
 
-  
     private void MovementToPositionEvent_OnMovementToPosition(MovementToPositionEvent movementToPositionEvent, MovementToPositionArgs movementToPositionArgs)
     {
         InitializeAimAnimationParameters();
         InitializeRollAnimationParameters();
         SetMovementToPositionAnimationParameters(movementToPositionArgs);
-
     }
-
-  
+    
     private void IdleEvent_OnIdle(IdleEvent idleEvent)
     {
         InitializeRollAnimationParameters();
         SetIdleAnimationParameters();
     }
 
-  
     private void AimWeaponEvent_OnWeaponAim(AimWeaponEvent aimWeaponEvent, AimWeaponEventArgs aimWeaponEventArgs)
     {
         InitializeAimAnimationParameters();
@@ -83,15 +78,12 @@ public class AnimatePlayer : MonoBehaviour
         player.animator.SetBool(Settings.rollUp, false);
     }
 
-
-    
     private void SetMovementAnimationParameters()
     {
         player.animator.SetBool(Settings.isMoving, true);
         player.animator.SetBool(Settings.isIdle, false);
     }
-
-
+    
     //set movement to position animation parameters
     private void SetMovementToPositionAnimationParameters(MovementToPositionArgs movementToPositionArgs)
     {
@@ -116,7 +108,7 @@ public class AnimatePlayer : MonoBehaviour
             }
         }
     }
-
+    
     //movement animation parameters
     private void SetIdleAnimationParameters()
     {

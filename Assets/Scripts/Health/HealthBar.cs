@@ -18,25 +18,20 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private GameObject healthBar;
     
     
-
-    
-    // Enable the health bar
+    //enable the health bar
     public void EnableHealthBar()
     {
-        Debug.Log("enemyhealth bar enabled");
         gameObject.SetActive(true);
     }
-
     
-    // Disable the health bar
+    //disable the health bar
     public void DisableHealthBar()
     {
-        Debug.Log("enemyhealth bar disabled");
         gameObject.SetActive(false);
     }
 
     
-    // Set health bar value with health percent between 0 and 1
+    //set health bar value with health percent
     public void SetHealthBarValue(float healthPercent)
     {
         healthBar.transform.localScale = new Vector3(healthPercent, 1f, 1f);

@@ -20,12 +20,12 @@ public class SoundEffectSO : ScriptableObject
     #endregion
     public AudioClip soundEffectClip;
     #region Tooltip
-    [Tooltip("The minimum pitch variation for the sound effect.  A random pitch variation will be generated between the minimum and maximum values.  A random pitch variation makes sound effects sound more natural.")]
+    [Tooltip("The minimum pitch variation for the sound effect")]
     #endregion
     [Range(0.1f, 1.5f)]
     public float soundEffectPitchRandomVariationMin = 0.8f;
     #region Tooltip
-    [Tooltip("The maximum pitch variation for the sound effect.  A random pitch variation will be generated between the minimum and maximum values.  A random pitch variation makes sound effects sound more natural.")]
+    [Tooltip("The maximum pitch variation for the sound effect")]
     #endregion
     [Range(0.1f, 1.5f)]
     public float soundEffectPitchRandomVariationMax = 1.2f;

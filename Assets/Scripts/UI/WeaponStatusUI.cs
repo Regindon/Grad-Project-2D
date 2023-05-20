@@ -46,65 +46,57 @@ public class WeaponStatusUI : MonoBehaviour
 
     private void Awake()
     {
-        // Get player
+       
         player = GameManager.Instance.GetPlayer();
     }
 
     private void OnEnable()
     {
-        // Subscribe to set active weapon event
+        //subscribe to events
         player.setActiveWeaponEvent.OnSetActiveWeapon += SetActiveWeaponEvent_OnSetActiveWeapon;
-
-        // Subscribe to weapon fired event
+        
         player.weaponFiredEvent.OnWeaponFired += WeaponFiredEvent_OnWeaponFired;
-
-        // Subscribe to reload weapon event
+        
         player.reloadWeaponEvent.OnReloadWeapon += ReloadWeaponEvent_OnWeaponReload;
-
-        // Subscribe to weapon reloaded event
+        
         player.weaponReloadedEvent.OnWeaponReloaded += WeaponReloadedEvent_OnWeaponReloaded;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from set active weapon event
+        //unsubscribe from events
         player.setActiveWeaponEvent.OnSetActiveWeapon -= SetActiveWeaponEvent_OnSetActiveWeapon;
-
-        // Unsubscribe from weapon fired event
+        
         player.weaponFiredEvent.OnWeaponFired -= WeaponFiredEvent_OnWeaponFired;
-
-        // Unsubscribe from reload weapon event
+        
         player.reloadWeaponEvent.OnReloadWeapon -= ReloadWeaponEvent_OnWeaponReload;
-
-        // Unsubscribe from weapon reloaded event
+        
         player.weaponReloadedEvent.OnWeaponReloaded -= WeaponReloadedEvent_OnWeaponReloaded;
     }
 
     private void Start()
     {
-        // Update active weapon status on the UI
+        //update active weapon status on the ui
         SetActiveWeapon(player.activeWeapon.GetCurrentWeapon());
     }
 
-    /// <summary>
-    /// Handle set active weapon event on the UI
-    /// </summary>
+
+    //handle set active weapon event on the ui
     private void SetActiveWeaponEvent_OnSetActiveWeapon(SetActiveWeaponEvent setActiveWeaponEvent, SetActiveWeaponEventArgs setActiveWeaponEventArgs)
     {
         SetActiveWeapon(setActiveWeaponEventArgs.weapon);
     }
 
-    /// <summary>
-    /// Handle Weapon fired event on the UI
-    /// </summary>
+    
+    
+    //handle Weapon fired event on the UI
     private void WeaponFiredEvent_OnWeaponFired(WeaponFiredEvent weaponFiredEvent, WeaponFiredEventArgs weaponFiredEventArgs)
     {
         WeaponFired(weaponFiredEventArgs.weapon);
     }
 
-    /// <summary>
-    /// Weapon fired update UI
-    /// </summary>
+ 
+    //weapon fired update ui
     private void WeaponFired(Weapon weapon)
     {
         UpdateAmmoText(weapon);
@@ -112,28 +104,26 @@ public class WeaponStatusUI : MonoBehaviour
         UpdateReloadText(weapon);
     }
 
-    /// <summary>
-    /// Handle weapon reload event on the UI
-    /// </summary>
+ 
+    //handle weapon reload event on the ui
     private void ReloadWeaponEvent_OnWeaponReload(ReloadWeaponEvent reloadWeaponEvent, ReloadWeaponEventArgs reloadWeaponEventArgs)
     {
         UpdateWeaponReloadBar(reloadWeaponEventArgs.weapon);
     }
 
-    /// <summary>
-    /// Handle weapon reloaded event on the UI
-    /// </summary>
+
+    
+    //handle weapon reloaded event on the UI
     private void WeaponReloadedEvent_OnWeaponReloaded(WeaponReloadedEvent weaponReloadedEvent, WeaponReloadedEventArgs weaponReloadedEventArgs)
     {
         WeaponReloaded(weaponReloadedEventArgs.weapon);
     }
 
-    /// <summary>
-    /// Weapon has been reloaded - update UI if current weapon
-    /// </summary>
+
+    //weapon has been reloaded update ui if current weapon
     private void WeaponReloaded(Weapon weapon)
     {
-        // if weapon reloaded is the current weapon
+        //if weapon reloaded is the current weapon
         if (player.activeWeapon.GetCurrentWeapon() == weapon)
         {
             UpdateReloadText(weapon);
@@ -143,9 +133,9 @@ public class WeaponStatusUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Set the active weapon on the UI
-    /// </summary>
+
+    
+    //sett the active weapon on the ui
     private void SetActiveWeapon(Weapon weapon)
     {
         UpdateActiveWeaponImage(weapon.weaponDetails);
@@ -153,7 +143,7 @@ public class WeaponStatusUI : MonoBehaviour
         UpdateAmmoText(weapon);
         UpdateAmmoLoadedIcons(weapon);
 
-        // If set weapon is still reloading then update reload bar
+        //if set weapon is still reloading then update reload bar
         if (weapon.isWeaponReloading)
         {
             UpdateWeaponReloadBar(weapon);
@@ -166,24 +156,24 @@ public class WeaponStatusUI : MonoBehaviour
         UpdateReloadText(weapon);
     }
 
-    /// <summary>
-    /// Populate active weapon image
-    /// </summary>
+
+    
+    //populate active weapon image
     private void UpdateActiveWeaponImage(WeaponDetailsSO weaponDetails)
     {
         weaponImage.sprite = weaponDetails.weaponSprite;
     }
 
-    /// <summary>
-    /// Populate active weapon name
+ 
+    //populate active weapon name
     private void UpdateActiveWeaponName(Weapon weapon)
     {
-        weaponNameText.text = "(" + weapon.weaponListPosition + ") " + weapon.weaponDetails.weaponName.ToUpper();
+        weaponNameText.text =  weapon.weaponDetails.weaponName.ToUpper();
     }
 
-    /// <summary>
-    /// Update the ammo remaining text on the UI
-    /// </summary>
+
+    
+    //update the ammo remaining text on the ui
     private void UpdateAmmoText(Weapon weapon)
     {
         if (weapon.weaponDetails.hasInfiniteAmmo)
@@ -196,16 +186,16 @@ public class WeaponStatusUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Update ammo clip icons on the UI
-    /// </summary>
+
+    
+    //update ammo clip icons on the UI
     private void UpdateAmmoLoadedIcons(Weapon weapon)
     {
         ClearAmmoLoadedIcons();
 
         for (int i = 0; i < weapon.weaponClipRemainingAmmo; i++)
         {
-            // Instantiate ammo icon prefab
+            //instantiate ammo icon prefab
             GameObject ammoIcon = Instantiate(GameResources.Instance.ammoIconPrefab, ammoHolderTransform);
 
             ammoIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, Settings.uiAmmoIconSpacing * i);
@@ -214,12 +204,12 @@ public class WeaponStatusUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Clear ammo icons
-    /// </summary>
+
+    
+    //clear ammo icons
     private void ClearAmmoLoadedIcons()
     {
-        // Loop through icon gameobjects and destroy
+        
         foreach (GameObject ammoIcon in ammoIconList)
         {
             Destroy(ammoIcon);
@@ -228,9 +218,8 @@ public class WeaponStatusUI : MonoBehaviour
         ammoIconList.Clear();
     }
 
-    /// <summary>
-    /// Reload weapon - update the reload bar on the UI
-    /// </summary>
+
+    //reload weapon update the reload bar on the ui
     private void UpdateWeaponReloadBar(Weapon weapon)
     {
         if (weapon.weaponDetails.hasInfiniteClipCapacity)
@@ -242,61 +231,58 @@ public class WeaponStatusUI : MonoBehaviour
         //reloadWeaponCoroutine = StartCoroutine(UpdateWeaponReloadBarRoutine(weapon));
     }
 
-    /// <summary>
-    /// Animate reload weapon bar coroutine
-    /// </summary>
+
+    //animate reload weapon bar coroutine
     private IEnumerator UpdateWeaponReloadBarRoutine(Weapon currentWeapon)
     {
-        // set the reload bar to red
+        //set the reload bar to red
         barImage.color = Color.red;
 
-        // Animate the weapon reload bar
+        //animate the weapon reload bar
         while (currentWeapon.isWeaponReloading)
         {
-            // update reloadbar
+            //update reloadbar
             float barFill = currentWeapon.weaponReloadTimer / currentWeapon.weaponDetails.weaponReloadTime;
 
-            // update bar fill
+            //update bar fill
             reloadBar.transform.localScale = new Vector3(barFill, 1f, 1f);
 
             yield return null;
         }
     }
 
-    /// <summary>
-    /// Initialise the weapon reload bar on the UI
-    /// </summary>
+
+    
+    //initialise the weapon reload bar on the UI
     private void ResetWeaponReloadBar()
     {
         StopReloadWeaponCoroutine();
-
-        // set bar color as green
+        
         barImage.color = Color.green;
-
-        // set bar scale to 1
+        
         reloadBar.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
-    /// <summary>
-    /// Stop coroutine updating weapon reload progress bar
-    /// </summary>
+
+    
+    //stop coroutine updating weapon reload progress bar
     private void StopReloadWeaponCoroutine()
     {
-        // Stop any active weapon reload bar on the UI
+        //stop any active weapon reload bar on the ui
         if (reloadWeaponCoroutine != null)
         {
             StopCoroutine(reloadWeaponCoroutine);
         }
     }
-
-    /// <summary>
-    /// Update the blinking weapon reload text
-    /// </summary>
+    
+    
+    
+    //update the blinking weapon reload text
     private void UpdateReloadText(Weapon weapon)
     {
         if ((!weapon.weaponDetails.hasInfiniteClipCapacity) && (weapon.weaponClipRemainingAmmo <= 0 || weapon.isWeaponReloading))
         {
-            // set the reload bar to red
+           
             barImage.color = Color.red;
 
             StopBlinkingReloadTextCoroutine();
@@ -308,10 +294,11 @@ public class WeaponStatusUI : MonoBehaviour
             StopBlinkingReloadText();
         }
     }
-
-    /// <summary>
-    /// Start the coroutine to blink the reload weapon text
-    /// </summary>
+    
+    
+    
+    
+    //start the coroutine to blink the reload weapon text
     private IEnumerator StartBlinkingReloadTextRoutine()
     {
         while (true)
@@ -323,9 +310,10 @@ public class WeaponStatusUI : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Stop the blinking reload text 
-    /// </summary>
+
+    
+    
+    //stop the blinking reload text 
     private void StopBlinkingReloadText()
     {
         StopBlinkingReloadTextCoroutine();
@@ -333,9 +321,8 @@ public class WeaponStatusUI : MonoBehaviour
         reloadText.text = "";
     }
 
-    /// <summary>
-    /// Stop the blinking reload text coroutine
-    /// </summary>
+
+    //stop the blinking reload text coroutine
     private void StopBlinkingReloadTextCoroutine()
     {
         if (blinkingReloadTextCoroutine != null)

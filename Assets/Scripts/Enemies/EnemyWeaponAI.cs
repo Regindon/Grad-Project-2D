@@ -12,6 +12,8 @@ public class EnemyWeaponAI : MonoBehaviour
     [Tooltip("Populate this with the WeaponShootPosition child gameobject transform")]
     #endregion Tooltip
     [SerializeField] private Transform weaponShootPosition;
+    
+    
     private Enemy enemy;
     private EnemyDetailsSO enemyDetails;
     private float firingIntervalTimer;
@@ -19,7 +21,7 @@ public class EnemyWeaponAI : MonoBehaviour
 
     private void Awake()
     {
-        // Load Components
+        
         enemy = GetComponent<Enemy>();
     }
 
@@ -34,10 +36,10 @@ public class EnemyWeaponAI : MonoBehaviour
 
     private void Update()
     {
-        // Update timers
+        
         firingIntervalTimer -= Time.deltaTime;
 
-        // Interval Timer
+        
         if (firingIntervalTimer < 0f)
         {
             if (firingDurationTimer >= 0)
@@ -48,67 +50,60 @@ public class EnemyWeaponAI : MonoBehaviour
             }
             else
             {
-                // Reset timers
+                //resetting timer
                 firingIntervalTimer = WeaponShootInterval();
                 firingDurationTimer = WeaponShootDuration();
             }
         }
     }
 
-    /// <summary>
-    /// Calculate a random weapon shoot duration between the min and max values
-    /// </summary>
+   
+    
+    //calculate a random weapon shoot duration between the min and max values
     private float WeaponShootDuration()
     {
-        // Calculate a random weapon shoot duration
+        //calculate a random weapon shoot duration
         return Random.Range(enemyDetails.firingDurationMin, enemyDetails.firingDurationMax);
     }
 
-    /// <summary>
-    /// Calculate a random weapon shoot interval between the min and max values
-    /// </summary>
+   
+    
+    //calculate a random weapon shoot interval between the min and max values
     private float WeaponShootInterval()
     {
-        // Calculate a random weapon shoot interval
+        //calculate a random weapon shoot interval
         return Random.Range(enemyDetails.firingIntervalMin, enemyDetails.firingIntervalMax);
     }
 
-    /// <summary>
-    /// Fire the weapon
-    /// </summary>
+
+    //firing weapon
     private void FireWeapon()
     {
-        // Player distance
+        //player distance
         Vector3 playerDirectionVector = GameManager.Instance.GetPlayer().GetPlayerPosition() - transform.position;
-
-        // Calculate direction vector of player from weapon shoot position
+        
         Vector3 weaponDirection = (GameManager.Instance.GetPlayer().GetPlayerPosition() - weaponShootPosition.position);
-
-        // Get weapon to player angle
+        
         float weaponAngleDegrees = HelperUtilities.GetAngleFromVector(weaponDirection);
-
-        // Get enemy to player angle
+        
         float enemyAngleDegrees = HelperUtilities.GetAngleFromVector(playerDirectionVector);
-
-        // Set enemy aim direction
+        
         AimDirection enemyAimDirection = HelperUtilities.GetAimDirection(enemyAngleDegrees);
 
-        // Trigger weapon aim event
+        //trigger weapon aim event
         enemy.aimWeaponEvent.CallAimWeaponEvent(enemyAimDirection, enemyAngleDegrees, weaponAngleDegrees, weaponDirection);
 
-        // Only fire if enemy has a weapon
+        //only fire if enemy has a weapon
         if (enemyDetails.enemyWeapon != null)
         {
-            // Get ammo range
             float enemyAmmoRange = enemyDetails.enemyWeapon.weaponCurrentAmmo.ammoRange;
-
-            // Is the player in range
+            
             if (playerDirectionVector.magnitude <= enemyAmmoRange)
             {
-                // Does this enemy require line of sight to the player before firing?
+                
                 if (enemyDetails.firingLineOfSightRequired && !IsPlayerInLineOfSight(weaponDirection, enemyAmmoRange)) return;
-
-                // Trigger fire weapon event
+                
+                //triger fireweapon event
                 enemy.fireWeaponEvent.CallFireWeaponEvent(true, true, enemyAimDirection, enemyAngleDegrees, weaponAngleDegrees, weaponDirection);
             }
         }

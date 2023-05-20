@@ -16,7 +16,7 @@ public class ReloadWeapon : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+    
         reloadWeaponEvent = GetComponent<ReloadWeaponEvent>();
         weaponReloadedEvent = GetComponent<WeaponReloadedEvent>();
         setActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
@@ -24,33 +24,29 @@ public class ReloadWeapon : MonoBehaviour
 
     private void OnEnable()
     {
-        // subscribe to reload weapon event
+        //subscribe to events
         reloadWeaponEvent.OnReloadWeapon += ReloadWeaponEvent_OnReloadWeapon;
-
-        // Subscribe to set active weapon event
+        
         setActiveWeaponEvent.OnSetActiveWeapon += SetActiveWeaponEvent_OnSetActiveWeapon;
     }
 
     private void OnDisable()
     {
-        // unsubscribe from reload weapon event
+        //unsubscribe from events
         reloadWeaponEvent.OnReloadWeapon -= ReloadWeaponEvent_OnReloadWeapon;
-
-        // Unsubscribe from set active weapon event
+        
         setActiveWeaponEvent.OnSetActiveWeapon -= SetActiveWeaponEvent_OnSetActiveWeapon;
     }
 
 
-    // Handle reload weapon event
-
+    //handle reload weapon event
     private void ReloadWeaponEvent_OnReloadWeapon(ReloadWeaponEvent reloadWeaponEvent, ReloadWeaponEventArgs reloadWeaponEventArgs)
     {
         StartReloadWeapon(reloadWeaponEventArgs);
     }
 
 
-    // Start reloading the weapon
-
+    //start reloading the weapon
     private void StartReloadWeapon(ReloadWeaponEventArgs reloadWeaponEventArgs)
     {
         if (reloadWeaponCoroutine != null)
@@ -62,21 +58,19 @@ public class ReloadWeapon : MonoBehaviour
     }
 
 
-    // Reload weapon coroutine
-
+    //reload weapon coroutine
     private IEnumerator ReloadWeaponRoutine(Weapon weapon, int topUpAmmoPercent)
     {
-        // Set weapon as reloading
         weapon.isWeaponReloading = true;
-
-        // Update reload progress timer
+        
+        //update reload progress timer
         while (weapon.weaponReloadTimer < weapon.weaponDetails.weaponReloadTime)
         {
             weapon.weaponReloadTimer += Time.deltaTime;
             yield return null;
         }
 
-        // If total ammo is to be increased then update
+        //if total ammo is to be increased then update
         if (topUpAmmoPercent != 0)
         {
             int ammoIncrease = Mathf.RoundToInt((weapon.weaponDetails.weaponAmmoCapacity * topUpAmmoPercent) / 100f);
@@ -93,37 +87,40 @@ public class ReloadWeapon : MonoBehaviour
             }
         }
 
-        // If weapon has infinite ammo then just refil the clip
+        //if weapon has infinite ammo then just refil the clip
+        
         if (weapon.weaponDetails.hasInfiniteAmmo)
         {
             weapon.weaponClipRemainingAmmo = weapon.weaponDetails.weaponClipAmmoCapacity;
         }
-        // else if not infinite ammo then if remaining ammo is greater than the amount required to
-        // refill the clip, then fully refill the clip
+        
+        //else if not infinite ammo then if remaining ammo is greater than the amount required to
+        //refill the clip, then fully refill the clip
+        
         else if (weapon.weaponRemainingAmmo >= weapon.weaponDetails.weaponClipAmmoCapacity)
         {
             weapon.weaponClipRemainingAmmo = weapon.weaponDetails.weaponClipAmmoCapacity;
         }
-        // else set the clip to the remaining ammo
+        
+        //else set the clip to the remaining ammo
         else
         {
             weapon.weaponClipRemainingAmmo = weapon.weaponRemainingAmmo;
         }
 
-        // Reset weapon reload timer
+        //reset weapon reload timer
         weapon.weaponReloadTimer = 0f;
 
-        // Set weapon as not reloading
+        //set weapon as not reloading
         weapon.isWeaponReloading = false;
 
-        // Call weapon reloaded event
+        //call weapon reloaded event
         weaponReloadedEvent.CallWeaponReloadedEvent(weapon);
 
     }
 
     
-    // Set active weapon event handler
-    
+    //set active weapon event handler
     private void SetActiveWeaponEvent_OnSetActiveWeapon(SetActiveWeaponEvent setActiveWeaponEvent, SetActiveWeaponEventArgs setActiveWeaponEventArgs)
     {
         if (setActiveWeaponEventArgs.weapon.isWeaponReloading)

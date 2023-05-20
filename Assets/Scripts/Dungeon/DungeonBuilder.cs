@@ -151,7 +151,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomOverlaps)
     {
 
-        //While room nodes in open room node queue and no room overlaps detected
+        //while room nodes in open room node queue and no room overlaps detected
         while (openRoomNodeQueue.Count > 0 && noRoomOverlaps == true)
         {
             
@@ -176,7 +176,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 dungeonBuilderRoomDictionary.Add(room.id, room);
             }
 
-            //else if the room type isn't an entrance
+            //else if the room type isnt an entrance
             else
             {
                 
@@ -184,6 +184,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
 
                 
                 noRoomOverlaps = CanPlaceRoomWithNoOverlaps(roomNode, parentRoom);
+                
             }
 
         }
@@ -209,7 +210,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             if (unconnectedAvailableParentDoorways.Count == 0)
             {
                 
-                return false; // room overlaps
+                return false; //room overlaps
             }
 
             Doorway doorwayParent = unconnectedAvailableParentDoorways[UnityEngine.Random.Range(0, unconnectedAvailableParentDoorways.Count)];

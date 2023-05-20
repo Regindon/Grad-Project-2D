@@ -22,10 +22,10 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
 
     private void Start()
     {
-        // This singleton gameobject will be the object pool parent
+        //shis singleton gameobject will be the object pool parent
         objectPoolTransform = this.gameObject.transform;
 
-        // Create object pools on start
+        //create object pools on start
         for (int i = 0; i < poolArray.Length; i++)
         {
             CreatePool(poolArray[i].prefab, poolArray[i].poolSize, poolArray[i].componentType);
@@ -33,16 +33,15 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
 
     }
 
-    /// <summary>
-    /// Create the object pool with the specified prefabs and the specified pool size for each
-    /// </summary>
+
+    //create the object pool with the specified prefabs and the specified pool size for each
     private void CreatePool(GameObject prefab, int poolSize, string componentType)
     {
         int poolKey = prefab.GetInstanceID();
 
-        string prefabName = prefab.name; // get prefab name
+        string prefabName = prefab.name; //get prefab name
 
-        GameObject parentGameObject = new GameObject(prefabName + "Anchor"); // create parent gameobject to parent the child objects to
+        GameObject parentGameObject = new GameObject(prefabName + "Anchor"); //create parent gameobject to parent the child objects to
 
         parentGameObject.transform.SetParent(objectPoolTransform);
 
@@ -63,16 +62,15 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
 
     }
 
-    /// <summary>
-    /// Reuse a gameobject component in the pool.  'prefab' is the prefab gameobject containing the component. 'position' is the world position for the gameobject where it should appear when enabled. 'rotation' should be set if the gameobject needs to be rotated.
-    /// </summary>
+
+    //reuse a gameobject component in the pool
     public Component ReuseComponent(GameObject prefab, Vector3 position, Quaternion rotation)
     {
         int poolKey = prefab.GetInstanceID();
 
         if (poolDictionary.ContainsKey(poolKey))
         {
-            // Get object from pool queue
+            //get object from pool queue
             Component componentToReuse = GetComponentFromPool(poolKey);
 
             ResetObject(position, rotation, componentToReuse, prefab);
@@ -86,9 +84,8 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
         }
     }
 
-    /// <summary>
-    /// Get a gameobject component from the pool using the 'poolKey'
-    /// </summary>
+
+    //get a gameobject component from the pool using the 'poolKey'
     private Component GetComponentFromPool(int poolKey)
     {
         Component componentToReuse = poolDictionary[poolKey].Dequeue();
@@ -102,9 +99,9 @@ public class PoolManager : SingletonMonobehaviour<PoolManager>
         return componentToReuse;
     }
 
-    /// <summary>
-    /// Reset the gameobject.
-    /// </summary>
+
+    
+    //reset the gameobject
     private void ResetObject(Vector3 position, Quaternion rotation, Component componentToReuse, GameObject prefab)
     {
         componentToReuse.transform.position = position;

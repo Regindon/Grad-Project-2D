@@ -14,7 +14,7 @@ public class ReceiveContactDamage : MonoBehaviour
 
     private void Awake()
     {
-        //Load components
+        
         health = GetComponent<Health>();
     }
 

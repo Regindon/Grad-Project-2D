@@ -10,7 +10,6 @@ public class MovementToPosition : MonoBehaviour
 
     private void Awake()
     {
-        
         rigidBody2D = GetComponent<Rigidbody2D>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
     }

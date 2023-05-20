@@ -28,7 +28,7 @@ public class ActiveWeapon : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+     
         setWeaponEvent = GetComponent<SetActiveWeaponEvent>();
     }
 
@@ -51,22 +51,22 @@ public class ActiveWeapon : MonoBehaviour
     {
         currentWeapon = weapon;
 
-        // Set current weapon sprite
+        //set current weapon sprite
         weaponSpriteRenderer.sprite = currentWeapon.weaponDetails.weaponSprite;
 
-        // If the weapon has a polygon collider and a sprite then set it to the weapon sprite physics shape
+        //if the weapon has a polygon collider and a sprite then set it to the weapon sprite physics shape
         if (weaponPolygonCollider2D != null && weaponSpriteRenderer.sprite != null)
         {
-            // Get sprite physics shape - this returns the sprite physics shape points as a list of Vector2s
+            //get sprite physics shape this returns the sprite physics shape points as a list of Vector2s
             List<Vector2> spritePhysicsShapePointsList = new List<Vector2>();
             weaponSpriteRenderer.sprite.GetPhysicsShape(0, spritePhysicsShapePointsList);
 
-            // Set polygon collider on weapon to pick up physics shap for sprite - set collider points to sprite physics shape points
+            //set polygon collider on weapon to pick up physics shap for sprite set collider points to sprite physics shape points
             weaponPolygonCollider2D.points = spritePhysicsShapePointsList.ToArray();
 
         }
 
-        // Set weapon shoot position
+        //set weapon shoot position
         weaponShootPositionTransform.localPosition = currentWeapon.weaponDetails.weaponShootPosition;
     }
 

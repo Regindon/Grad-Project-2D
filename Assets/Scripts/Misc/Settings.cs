@@ -19,8 +19,7 @@ public static class Settings
     public const int maxChildCorridors = 3; // Max number of child corridors leading from a room. - maximum should be 3 although this is not recommended since it can cause the dungeon building to fail since the rooms are more likely to not fit together;
     public const float doorUnlockDelay = 1f;
     #endregion
-
-
+    
     #region ANIMATOR PARAMETERS
     // Animator parameters - Player
     public static int aimUp = Animator.StringToHash("aimUp");
@@ -52,7 +51,7 @@ public static class Settings
     #endregion
 
     #region FIRING CONTROL
-    public const float useAimAngleDistance = 3.5f; // if the target distance is less than this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon). 
+    public const float useAimAngleDistance = 3.5f;
     #endregion
 
     #region ASTAR PATHFINDING PARAMETERS
@@ -61,7 +60,6 @@ public static class Settings
     public const int targetFrameRateToSpreadPathfindingOver = 60;
     public const float playerMoveDistanceToRebuildPath = 3f;
     public const float enemyPathRebuildCooldown = 2f;
-
     #endregion
 
     #region ENEMY PARAMETERS

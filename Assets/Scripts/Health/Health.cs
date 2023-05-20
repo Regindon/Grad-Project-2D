@@ -14,7 +14,8 @@ public class Health : MonoBehaviour
     [Tooltip("Populate with the HealthBar component on the HealthBar gameobject")]
     #endregion
     [SerializeField] private HealthBar healthBar;
-    
+
+    #region Referances
     private int startingHealth;
     private int currentHealth;
     private HealthEvent healthEvent;
@@ -25,23 +26,23 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer = null;
     private const float spriteFlashInterval = 0.2f;
     private WaitForSeconds WaitForSecondsSpriteFlashInterval = new WaitForSeconds(spriteFlashInterval);
-
     [HideInInspector] public bool isDamageable = true;
     [HideInInspector] public Enemy enemy;
     [HideInInspector] public GameState gameState;
+    #endregion
 
     private void Awake()
     {
-        //Load compnents
+     
         healthEvent = GetComponent<HealthEvent>();
     }
 
     private void Start()
     {
-        // Trigger a health event for UI update
+        //trigger a health event for UI update
         CallHealthEvent(0);
 
-        // Attempt to load enemy / player components
+        //attempt to load enemy player components
         player = GetComponent<Player>();
         enemy = GetComponent<Enemy>();
 
@@ -50,17 +51,15 @@ public class Health : MonoBehaviour
         if (gameState == GameState.bossStage || gameState == GameState.engagingBoss)
         {
             enableEnemyBossHealthBar = true;
-            Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
+            //Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
         }
         else
         {
             enableEnemyBossHealthBar = false;
-            Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
+            //Debug.Log(enableEnemyBossHealthBar+"before all +++++++++");
         }
-        
 
-
-        // Get player / enemy hit immunity details
+        //get player and enemy hit immunity details
         if (player != null)
         {
             if (player.playerDetails.isImmuneAfterHit)
@@ -80,26 +79,24 @@ public class Health : MonoBehaviour
             }
         }
         
-        // Enable the health bar if required
+        //enable the health bar if required
         if (enemy != null && enemy.enemyDetails.isHealthBarDisplayed == true && healthBar != null && enableEnemyBossHealthBar)
         {
-            Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
+            //Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
             healthBar.EnableHealthBar();
             
         }
         else if (healthBar != null || !enableEnemyBossHealthBar)
         {
-            Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
+            //Debug.Log(enableEnemyBossHealthBar +"+++++++++++++++++++++++++++++++++++");
             healthBar.DisableHealthBar();
         }
     }
 
     
-
-
-    /// <summary>
-    /// Public method called when damage is taken
-    /// </summary>
+    
+    
+    //public method called when damage is taken
     public void TakeDamage(int damageAmount)
     {
         bool isRolling = false;
@@ -114,7 +111,7 @@ public class Health : MonoBehaviour
 
             PostHitImmunity();
             
-            // Set health bar as the percentage of health remaining
+            //set health bar as the percentage of health remaining
             if (healthBar != null)
             {
                 healthBar.SetHealthBarValue((float)currentHealth / (float)startingHealth);
@@ -122,30 +119,30 @@ public class Health : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Indicate a hit and give some post hit immunity
-    /// </summary>
+    
+    
+    //indicate a hit and give some post hit immunity
     private void PostHitImmunity()
     {
-        // Check if gameobject is active - if not return
+        
         if (gameObject.activeSelf == false)
             return;
 
-        // If there is post hit immunity then
+       
         if (isImmuneAfterHit)
         {
             if (immunityCoroutine != null)
                 StopCoroutine(immunityCoroutine);
 
-            // flash red and give period of immunity
+            //flash red and give period of immunity
             immunityCoroutine = StartCoroutine(PostHitImmunityRoutine(immunityTime, spriteRenderer));
         }
 
     }
 
-    /// <summary>
-    /// Coroutine to indicate a hit and give some post hit immunity
-    /// </summary>
+
+    
+    //coroutine to indicate a hit and give some post hit immunity
     private IEnumerator PostHitImmunityRoutine(float immunityTime, SpriteRenderer spriteRenderer)
     {
         int iterations = Mathf.RoundToInt(immunityTime / spriteFlashInterval / 2f);
@@ -174,23 +171,21 @@ public class Health : MonoBehaviour
 
     private void CallHealthEvent(int damageAmount)
     {
-        // Trigger health event
+        //trigger health event
         healthEvent.CallHealthChangedEvent(((float)currentHealth / (float)startingHealth), currentHealth, damageAmount);
     }
 
-
-    /// <summary>
-    /// Set starting health 
-    /// </summary>
+    
+    
+    //set starting health 
     public void SetStartingHealth(int startingHealth)
     {
         this.startingHealth = startingHealth;
         currentHealth = startingHealth;
     }
-
-    /// <summary>
-    /// Get the starting health
-    /// </summary>
+    
+    
+    //get the starting health
     public int GetStartingHealth()
     {
         return startingHealth;

@@ -24,20 +24,20 @@ public class InstantiatedRoom : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
 
-        // Save room collider bounds
+        //save room collider bounds
         roomColliderBounds = boxCollider2D.bounds;
 
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // If the player triggered the collider
+        //if the player triggered the collider
         if (collision.tag == Settings.playerTag && room != GameManager.Instance.GetCurrentRoom())
         {
-            // Set room as visited
+            //set room as visited
             this.room.isPreviouslyVisited = true;
 
-            // Call room changed event
+            //call room changed event
             StaticEventHandler.CallRoomChangedEvent(room);
         }
     }
@@ -61,10 +61,10 @@ public class InstantiatedRoom : MonoBehaviour
     
     private void PopulateTilemapMemberVariables(GameObject roomGameobject)
     {
-        // Get the grid component.
+        //get the grid component.
         grid = roomGameobject.GetComponentInChildren<Grid>();
 
-        // Get tilemaps in children.
+        //get tilemaps in children.
         Tilemap[] tilemaps = roomGameobject.GetComponentsInChildren<Tilemap>();
 
         foreach (Tilemap tilemap in tilemaps)
@@ -101,13 +101,13 @@ public class InstantiatedRoom : MonoBehaviour
     
     private void BlockOffUnusedDoorWays()
     {
-        // Loop through all doorways
+        //loop through all doorways
         foreach (Doorway doorway in room.doorWayList)
         {
             if (doorway.isConnected)
                 continue;
 
-            // Block unconnected doorways using tiles on tilemaps
+            //block unconnected doorways using tiles on tilemaps
             if (collisionTilemap != null)
             {
                 BlockADoorwayOnTilemapLayer(collisionTilemap, doorway);
@@ -166,18 +166,18 @@ public class InstantiatedRoom : MonoBehaviour
     {
         Vector2Int startPosition = doorway.doorwayStartCopyPosition;
 
-        // loop through all tiles to copy
+        //loop through all tiles to copy
         for (int xPos = 0; xPos < doorway.doorwayCopyTileWidth; xPos++)
         {
             for (int yPos = 0; yPos < doorway.doorwayCopyTileHeight; yPos++)
             {
-                // Get rotation of tile being copied
+                //get rotation of tile being copied
                 Matrix4x4 transformMatrix = tilemap.GetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0));
 
-                // Copy tile
+                //copy tile
                 tilemap.SetTile(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0), tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
 
-                // Set rotation of tile copied
+                //set rotation of tile copied
                 tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + 1 + xPos, startPosition.y - yPos, 0), transformMatrix);
             }
         }
@@ -188,19 +188,19 @@ public class InstantiatedRoom : MonoBehaviour
     {
         Vector2Int startPosition = doorway.doorwayStartCopyPosition;
 
-        // loop through all tiles to copy
+        //loop through all tiles to copy
         for (int yPos = 0; yPos < doorway.doorwayCopyTileHeight; yPos++)
         {
 
             for (int xPos = 0; xPos < doorway.doorwayCopyTileWidth; xPos++)
             {
-                // Get rotation of tile being copied
+                //get rotation of tile being copied
                 Matrix4x4 transformMatrix = tilemap.GetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0));
 
-                // Copy tile
+                //copy tile
                 tilemap.SetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - 1 - yPos, 0), tilemap.GetTile(new Vector3Int(startPosition.x + xPos, startPosition.y - yPos, 0)));
 
-                // Set rotation of tile copied
+                //set rotation of tile copied
                 tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - 1 - yPos, 0), transformMatrix);
 
             }
@@ -208,23 +208,23 @@ public class InstantiatedRoom : MonoBehaviour
         }
     }
     
-    // Update obstacles used by AStar pathfinmding.
+    //update obstacles used by AStar pathfinmding.
     
     private void  AddObstaclesAndPreferredPaths()
     {
-        // this array will be populated with wall obstacles 
+        //this array will be populated with wall obstacles 
         aStarMovementPenalty = new int[room.templateUpperBounds.x - room.templateLowerBounds.x + 1, room.templateUpperBounds.y - room.templateLowerBounds.y + 1];
 
 
-        // Loop thorugh all grid squares
+        //loop thorugh all grid squares
         for (int x = 0; x < (room.templateUpperBounds.x - room.templateLowerBounds.x + 1); x++)
         {
             for (int y = 0; y < (room.templateUpperBounds.y - room.templateLowerBounds.y + 1); y++)
             {
-                // Set default movement penalty for grid sqaures
+                //set default movement penalty for grid sqaures
                 aStarMovementPenalty[x, y] = Settings.defaultAStarMovementPenalty;
 
-                // Add obstacles for collision tiles the enemy can't walk on
+                //add obstacles for collision tiles the enemy can't walk on
                 TileBase tile = collisionTilemap.GetTile(new Vector3Int(x + room.templateLowerBounds.x, y + room.templateLowerBounds.y, 0));
 
                 foreach (TileBase collisionTile in GameResources.Instance.enemyUnwalkableCollisionTilesArray)
@@ -235,8 +235,8 @@ public class InstantiatedRoom : MonoBehaviour
                         break;
                     }
                 }
-                // Add preferred path for enemies (1 is the preferred path value, default value for
-                // a grid location is specified in the Settings).
+                //add preferred path for enemies (1 is the preferred path value, default value for
+                //a grid location is specified in the Settings).
                 if (tile == GameResources.Instance.preferredEnemyPathTile)
                 {
                     aStarMovementPenalty[x, y] = Settings.preferredPathAStarMovementPenalty;
@@ -246,17 +246,17 @@ public class InstantiatedRoom : MonoBehaviour
 
     }
 
-    // Add opening doors if this is not a corridor room
+    //add opening doors if this is not a corridor room
     private void AddDoorsToRooms()
     {
         // if the room is a corridor then return
         if (room.roomNodeType.isCorridorEW || room.roomNodeType.isCorridorNS) return;
 
-        // Instantiate door prefabs at doorway positions
+        //instantiate door prefabs at doorway positions
         foreach (Doorway doorway in room.doorWayList)
         {
 
-            // if the doorway prefab isn't null and the doorway is connected
+            //if the doorway prefab isn't null and the doorway is connected
             if (doorway.doorPrefab != null && doorway.isConnected)
             {
                 float tileDistance = Settings.tileSizePixels / Settings.pixelsPerUnit;
@@ -271,32 +271,32 @@ public class InstantiatedRoom : MonoBehaviour
                 }
                 else if (doorway.orientation == Orientation.south)
                 {
-                    // create door with parent as the room
+                    //create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
                     door.transform.localPosition = new Vector3(doorway.position.x + tileDistance / 2f, doorway.position.y, 0f);
                 }
                 else if (doorway.orientation == Orientation.east)
                 {
-                    // create door with parent as the room
+                    //reate door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
                     door.transform.localPosition = new Vector3(doorway.position.x -tileDistance* 0.5f, doorway.position.y+tileDistance*1.5f, 0f);
                 }
                 else if (doorway.orientation == Orientation.west)
                 {
-                    // create door with parent as the room
+                    //create door with parent as the room
                     door = Instantiate(doorway.doorPrefab, gameObject.transform);
                     door.transform.localPosition = new Vector3(doorway.position.x +tileDistance*1.5f, doorway.position.y+tileDistance*1.5f , 0f);
                 }
                 
-                // Get door component
+                //get door component
                 Door doorComponent = door.GetComponent<Door>();
 
-                // Set if door is part of a boss room
+                //set if door is part of a boss room
                 if (room.roomNodeType.isBossRoom)
                 {
                     doorComponent.isBossRoomDoor = true;
 
-                    // lock the door to prevent access to the room
+                    //lock the door to prevent access to the room
                     doorComponent.LockDoor();
                 }
 
@@ -309,13 +309,13 @@ public class InstantiatedRoom : MonoBehaviour
     
     private void DisableCollisionTilemapRenderer()
     {
-        // Disable collision tilemap renderer
+        //disable collision tilemap renderer
         collisionTilemap.gameObject.GetComponent<TilemapRenderer>().enabled = false;
 
     }
     
      
-    // Disable the room trigger collider that is used to trigger when the player enters a room
+    //disable the room trigger collider that is used to trigger when the player enters a room
      
     public void DisableRoomCollider()
     {
@@ -323,29 +323,29 @@ public class InstantiatedRoom : MonoBehaviour
     }
 
    
-    // Enable the room trigger collider that is used to trigger when the player enters a room
+    //enable the room trigger collider that is used to trigger when the player enters a room
     public void EnableRoomCollider()
     {
         boxCollider2D.enabled = true;
     }
     
-    // Lock the room doors
+    //lock the room doors
     
     public void LockDoors()
     {
         Door[] doorArray = GetComponentsInChildren<Door>();
 
-        // Trigger lock doors
+        //trigger lock doors
         foreach (Door door in doorArray)
         {
             door.LockDoor();
         }
 
-        // Disable room trigger collider
+        //disable room trigger collider
         DisableRoomCollider();
     }
     
-    // Unlock the room doors
+    //unlock the room doors
     public void UnlockDoors(float doorUnlockDelay)
     {
         StartCoroutine(UnlockDoorsRoutine(doorUnlockDelay));
@@ -354,7 +354,7 @@ public class InstantiatedRoom : MonoBehaviour
     
     
     
-    // Unlock the room doors routine
+    //unlock the room doors routine
     private IEnumerator UnlockDoorsRoutine(float doorUnlockDelay)
     {
         if (doorUnlockDelay > 0f)
@@ -362,13 +362,13 @@ public class InstantiatedRoom : MonoBehaviour
 
         Door[] doorArray = GetComponentsInChildren<Door>();
 
-        // Trigger open doors
+        //trigger open doors
         foreach (Door door in doorArray)
         {
             door.UnlockDoor();
         }
 
-        // Enable room trigger collider
+        //enable room trigger collider
         EnableRoomCollider();
     }
 

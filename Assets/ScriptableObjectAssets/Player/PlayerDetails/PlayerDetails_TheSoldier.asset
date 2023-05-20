@@ -15,7 +15,7 @@ MonoBehaviour:
   playerCharacterName: The Soldier
   playerPrefab: {fileID: 5938347700491211557, guid: 25cd45ce0ff728846ae2804b19d0f1c7, type: 3}
   runtimeAnimatorController: {fileID: 9100000, guid: 8830c20bc5c44dd49a03bf79fbf38068, type: 2}
-  playerHealthAmount: 100
+  playerHealthAmount: 250
   isImmuneAfterHit: 1
   hitImmunityTime: 2
   startingWeapon: {fileID: 11400000, guid: bb83d22ca02905c48b5097605f2f0040, type: 2}

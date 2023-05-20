@@ -28,7 +28,7 @@ public class EnemyDetailsSO : ScriptableObject
     [Header("ENEMY MATERIAL")]
     #endregion
     #region Tooltip
-    [Tooltip("This is the standard lit shader material for the enemy (used after the enemy materializes")]
+    [Tooltip("This is the standard lit shader material for the enemy")]
     #endregion
     public Material enemyStandardMaterial;
 
@@ -46,7 +46,7 @@ public class EnemyDetailsSO : ScriptableObject
     public Shader enemyMaterializeShader;
     [ColorUsage(true, true)]
     #region Tooltip
-    [Tooltip("The colour to use when the enemy materializes.  This is an HDR color so intensity can be set to cause glowing / bloom")]
+    [Tooltip("The colour to use when the enemy materializes")]
     #endregion
     public Color enemyMaterializeColor;
 
@@ -59,23 +59,23 @@ public class EnemyDetailsSO : ScriptableObject
     #endregion
     public WeaponDetailsSO enemyWeapon;
     #region Tooltip
-    [Tooltip("The minimum time delay interval in seconds between bursts of enemy shooting.  This value should be greater than 0. A random value will be selected between the minimum value and the maximum value")]
+    [Tooltip("The minimum time delay interval in seconds between bursts of enemy shooting")]
     #endregion
     public float firingIntervalMin = 0.1f;
     #region Tooltip
-    [Tooltip("The maximum time delay interval in seconds between bursts of enemy shooting.  A random value will be selected between the minimum value and the maximum value")]
+    [Tooltip("The maximum time delay interval in seconds between bursts of enemy shooting")]
     #endregion
     public float firingIntervalMax = 1f;
     #region Tooltip
-    [Tooltip("The minimum firing duration that the enemy shoots for during a firing burst.  This value should be greater than zero.  A random value will be selected between the minimum value and the maximum value.")]
+    [Tooltip("The minimum firing duration that the enemy shoots for during a firing burst")]
     #endregion
     public float firingDurationMin = 1f;
     #region Tooltip
-    [Tooltip("The maximum firing duration that the enemy shoots for during a firing burst.  A random value will be selected between the minimum value and the maximum value.")]
+    [Tooltip("The maximum firing duration that the enemy shoots for during a firing burst")]
     #endregion
     public float firingDurationMax = 2f;
     #region Tooltip
-    [Tooltip("Select this if line of sight is required of the player before the enemy fires.  If line of sight isn't selected the enemy will fire regardless of obstacles whenever the player is 'in range'")]
+    [Tooltip("Select this if line of sight is required of the player before the enemy fires")]
     #endregion
     public bool firingLineOfSightRequired;
 
@@ -88,7 +88,7 @@ public class EnemyDetailsSO : ScriptableObject
     #endregion
     public EnemyHealthDetails[] enemyHealthDetailsArray;
     #region Tooltip
-    [Tooltip("Select if has immunity period immediately after being hit.  If so specify the immunity time in seconds in the other field")]
+    [Tooltip("Select if has immunity period immediately after being hit")]
     #endregion
     public bool isImmuneAfterHit = false;
     #region Tooltip

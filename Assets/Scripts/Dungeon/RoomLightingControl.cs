@@ -10,7 +10,7 @@ public class RoomLightingControl : MonoBehaviour
 
     private void Awake()
     {
-        // Load components
+        //load components
         instantiatedRoom = GetComponent<InstantiatedRoom>();
     }
 
@@ -28,17 +28,16 @@ public class RoomLightingControl : MonoBehaviour
 
 
 
-    // Handle room changed event
+    //handle room changed event
 
     private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
     {
-        // If this is the room entered and the room isn't already lit, then fade in the room lighting
+        
         if (roomChangedEventArgs.room == instantiatedRoom.room && !instantiatedRoom.room.isLit)
         {
-            // Fade in room
+            
             //FadeInRoomLighting();
-
-            // Fade in the room doors lighting
+            
             //FadeInDoors();
 
             instantiatedRoom.room.isLit = true;
@@ -47,18 +46,17 @@ public class RoomLightingControl : MonoBehaviour
     }
 
 
-    // Fade in the room lighting
+    
     private void FadeInRoomLighting()
     {
-        // Fade in the lighting for the room tilemaps
+        
         StartCoroutine(FadeInRoomLightingRoutine(instantiatedRoom));
     }
-
-    // Fade in the room lighting coroutine
+    
 
     private IEnumerator FadeInRoomLightingRoutine(InstantiatedRoom instantiatedRoom)
     {
-        // Create new material to fade in
+        //create new material to fade in
         Material material = new Material(GameResources.Instance.variableLitShader);
 
         instantiatedRoom.groundTilemap.GetComponent<TilemapRenderer>().material = material;
@@ -73,7 +71,7 @@ public class RoomLightingControl : MonoBehaviour
             yield return null;
         }
 
-        // Set material back to lit material
+        //set material back to lit material
         instantiatedRoom.groundTilemap.GetComponent<TilemapRenderer>().material = GameResources.Instance.litMaterial;
         instantiatedRoom.decoration1Tilemap.GetComponent<TilemapRenderer>().material = GameResources.Instance.litMaterial;
         instantiatedRoom.decoration2Tilemap.GetComponent<TilemapRenderer>().material = GameResources.Instance.litMaterial;
@@ -83,7 +81,7 @@ public class RoomLightingControl : MonoBehaviour
 
     }
 
-    // Fade in the doors
+   
     private void FadeInDoors()
     {
         Door[] doorArray = GetComponentsInChildren<Door>();
