@@ -23,6 +23,29 @@ public class RoomTemplateSO : ScriptableObject
     public GameObject prefab;
 
     [HideInInspector] public GameObject previousPrefab; // this is used to regenerate the guid if the so is copied and the prefab is changed
+    
+    #region Header ROOM MUSIC
+
+    [Space(10)]
+    [Header("ROOM MUSIC")]
+
+    #endregion Header ROOM MUSIC
+
+    #region Tooltip
+
+    [Tooltip("The battle music SO when the room hasn't been cleared of enemies")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO battleMusic;
+
+    #region Tooltip
+
+    [Tooltip("Ambient music SO for when the room has been cleared of enemies")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO ambientMusic;
 
 
     #region Header ROOM CONFIGURATION
@@ -120,6 +143,8 @@ public class RoomTemplateSO : ScriptableObject
         HelperUtilities.ValidateCheckNullValue(this, nameof(prefab), prefab);
         HelperUtilities.ValidateCheckNullValue(this, nameof(roomNodeType), roomNodeType);
 
+        HelperUtilities.ValidateCheckNullValue(this, nameof(battleMusic), battleMusic);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ambientMusic), ambientMusic);
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(doorwayList), doorwayList);
 
         // Check enemies and room spawn parameters for levels

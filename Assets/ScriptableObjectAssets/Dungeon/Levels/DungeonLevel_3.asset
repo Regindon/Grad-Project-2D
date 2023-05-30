@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49a72db0f6bd2f346abe5850aef8ad28, type: 2}
   - {fileID: 11400000, guid: e5ecace0352c6184b9b8c3f9f4d813b0, type: 2}
   - {fileID: 11400000, guid: 8b20ef7460e8df741853e4b5dfffcfbc, type: 2}
+  - {fileID: 11400000, guid: 32cc18e9bec1e7b49ad9aa21991d7ecf, type: 2}
   - {fileID: 11400000, guid: 81455b817dd04094e801434bc822d068, type: 2}
   - {fileID: 11400000, guid: 8e918fc6f09b5154cb7b6aae0a2dd3d7, type: 2}
   - {fileID: 11400000, guid: a98de15d41828b14aacd8111130f23f5, type: 2}
@@ -30,7 +31,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f57554c116567443ae4d830f268bf27, type: 2}
   - {fileID: 11400000, guid: 38ce0efc273c5f44082d0a46b83650e8, type: 2}
   roomNodeGraphList:
-  - {fileID: 11400000, guid: 9247a3db345bd0a439365151f98481ff, type: 2}
-  - {fileID: 11400000, guid: a569a20fee83dcc46bce9dc24a6d84b9, type: 2}
-  - {fileID: 11400000, guid: a1914e13e0ab3c54daa602cf0903da94, type: 2}
-  - {fileID: 11400000, guid: ffe7cec060d00ee4d831bc2d52e3f46d, type: 2}
+  - {fileID: 11400000, guid: 1bb5e57130619624098bf1734dd572c5, type: 2}
+  - {fileID: 11400000, guid: 96ea0e04227a3554cad1194cd6fa9969, type: 2}
+  - {fileID: 11400000, guid: 9dc84dc1a3db705438ab21c30040ac32, type: 2}
