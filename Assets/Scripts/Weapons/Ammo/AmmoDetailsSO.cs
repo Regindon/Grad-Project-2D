@@ -133,6 +133,8 @@ public class AmmoDetailsSO : ScriptableObject
     [Tooltip("The ending width for the ammo trail")]
     #endregion
     [Range(0f, 1f)] public float ammoTrailEndWidth;
+    
+    
 
     #region Validation
 #if UNITY_EDITOR
