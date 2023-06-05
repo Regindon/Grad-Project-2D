@@ -794,7 +794,7 @@ Tilemap:
   m_GameObject: {fileID: 2039344564962182192}
   m_Enabled: 1
   m_Tiles:
-  - first: {x: 3, y: -11, z: 0}
+  - first: {x: 3, y: -12, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -804,7 +804,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 4, y: -11, z: 0}
+  - first: {x: 4, y: -12, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -814,7 +814,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 5, y: -11, z: 0}
+  - first: {x: 5, y: -12, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -924,7 +924,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 11, y: 14, z: 0}
+  - first: {x: 11, y: 15, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -934,7 +934,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 12, y: 14, z: 0}
+  - first: {x: 12, y: 15, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -944,7 +944,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 13, y: 14, z: 0}
+  - first: {x: 13, y: 15, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 5
@@ -1006,8 +1006,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -6, y: -11, z: 0}
-  m_Size: {x: 25, y: 26, z: 1}
+  m_Origin: {x: -6, y: -12, z: 0}
+  m_Size: {x: 25, y: 28, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -12459,6 +12459,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2039344565743812767}
   - component: {fileID: 2039344565743812764}
+  - component: {fileID: -2026404118588232228}
+  - component: {fileID: 8007964290933913554}
   m_Layer: 12
   m_Name: BossRoom_Level4_3
   m_TagString: Untagged
@@ -12496,7 +12498,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.689434, y: 2.502637}
+  m_Offset: {x: 6.689434, y: 2.5026364}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12507,8 +12509,42 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 23.004303, y: 22.815428}
+  m_Size: {x: 23.004303, y: 24.876747}
   m_EdgeRadius: 0
+--- !u!114 &-2026404118588232228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039344565743812765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e113a7b17b39c64438b826c2739d2774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  groundTilemap: {fileID: 0}
+  decoration1Tilemap: {fileID: 0}
+  decoration2Tilemap: {fileID: 0}
+  frontTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
+  minimapTilemap: {fileID: 0}
+  roomColliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+--- !u!114 &8007964290933913554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039344565743812765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c89cbc0d60b04642b62d4d1a02a073a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2039344565959483186
 GameObject:
   m_ObjectHideFlags: 0
