@@ -73,3 +73,6 @@ TagManager:
   - name: Minimap
     uniqueID: 1491282665
     locked: 0
+  - name: UIB
+    uniqueID: 1938109805
+    locked: 0

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -60,11 +61,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private InstantiatedRoom bossRoom;
     #endregion
 
+    
+    //using protected override because this class is used by singleton
     protected override void Awake()
     {
         base.Awake();
         
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
+        //playerDetails.startingWeaponList[1].weaponCurrentAmmo.ammoDamage+=100;
         
         InstantiatePlayer();
     }
