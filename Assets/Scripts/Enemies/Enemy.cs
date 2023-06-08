@@ -86,6 +86,7 @@ public class Enemy : MonoBehaviour
     {
         //unsub to events
         healthEvent.OnHealthChanged -= HealthEvent_OnHealthLost;
+        //Or i can also put blood sprite effect here too
     }
 
     
@@ -105,6 +106,7 @@ public class Enemy : MonoBehaviour
     private void EnemyDestroyed()
     {
         DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        //CREATING SPRITE FOR BLOOD EFFECT?
         destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth());
     }
 

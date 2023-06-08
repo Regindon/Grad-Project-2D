@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be0fdb13b1e8d94c8c72b6818fdd15f, type: 3}
   m_Name: Room_ChestRoom_Level2_5
   m_EditorClassIdentifier: 
-  guid: 44338945412b5ac46b8384736233b56e
-  prefab: {fileID: 2039344565743812765, guid: 9aac767d839b97742bb5342155c9f5f4, type: 3}
-  previousPrefab: {fileID: 2039344565743812765, guid: 9aac767d839b97742bb5342155c9f5f4, type: 3}
+  guid: 9e975aa45745e8e48b8a96437a438f63
+  prefab: {fileID: 2039344565743812765, guid: d9888ca99da34a34ea58bef9841e29b4, type: 3}
+  previousPrefab: {fileID: 2039344565743812765, guid: d9888ca99da34a34ea58bef9841e29b4, type: 3}
   battleMusic: {fileID: 11400000, guid: b9af57e8634df6f43a1d2306296b5449, type: 2}
   ambientMusic: {fileID: 11400000, guid: 1441baea6b195da4dbeb125ac1fa9592, type: 2}
   roomNodeType: {fileID: 11400000, guid: 5b3d43927440f0c42894a359a673c86e, type: 2}
