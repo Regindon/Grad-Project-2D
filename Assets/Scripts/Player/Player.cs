@@ -116,6 +116,8 @@ public class Player : MonoBehaviour
         //if player has died
         if (healthEventArgs.healthAmount <= 0f)
         {
+            //restart buff stats to default
+            RestartWeaponBuffs();
             destroyedEvent.CallDestroyedEvent(true, 0);
         }
 
@@ -166,5 +168,39 @@ public class Player : MonoBehaviour
 
         return weapon;
 
+    }
+
+    private void RestartWeaponBuffs()
+    {
+        RestartAK();
+        RestartPistol();
+        RestartShotgun();
+    }
+
+    private void RestartAK()
+    {
+        playerDetails.startingWeaponList[1].weaponFireRate = 0.25f;
+        playerDetails.startingWeaponList[1].weaponCurrentAmmo.ammoDamage = 10;
+        playerDetails.startingWeaponList[1].weaponCurrentAmmo.ammoRange = 15;
+    }
+
+    private void RestartPistol()
+    {
+        playerDetails.startingWeaponList[0].weaponFireRate = 0.3f;
+        playerDetails.startingWeaponList[0].weaponCurrentAmmo.ammoDamage = 6;
+        playerDetails.startingWeaponList[0].weaponCurrentAmmo.ammoRange = 10;
+    }
+
+    private void RestartShotgun()
+    {
+        playerDetails.startingWeaponList[2].weaponFireRate = 0.9f;
+        playerDetails.startingWeaponList[2].weaponCurrentAmmo.ammoDamage = 8;
+        playerDetails.startingWeaponList[2].weaponCurrentAmmo.ammoRange = 8;
+    }
+
+    private void OnApplicationQuit()
+    {
+        RestartWeaponBuffs();
+        
     }
 }

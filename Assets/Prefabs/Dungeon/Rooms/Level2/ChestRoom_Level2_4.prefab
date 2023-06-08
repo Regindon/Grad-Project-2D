@@ -13699,6 +13699,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2039344565743812767}
     m_Modifications:
+    - target: {fileID: 458158396769623366, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: m_text
+      value: "Increase the damage of Shotgun \r\n\r\n\r\n\r\n\r\nPress \"E\"\r\nTo
+        Choose"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696249790801683893, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: m_text
+      value: 'Increase the range of Pistol
+
+
+
+
+
+        Press "E"
+
+        To Choose'
+      objectReference: {fileID: 0}
     - target: {fileID: 2789981609925774947, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13765,7 +13782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2789981609925774947, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5.76
+      value: -5.38
       objectReference: {fileID: 0}
     - target: {fileID: 2789981609925774947, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -13782,6 +13799,30 @@ PrefabInstance:
     - target: {fileID: 2789981609925774947, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587450058227074114, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760390445112464651, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: buffTypeIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760390445112464651, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: amountOfRangeBuff
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641826455043524584, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: buffTypeIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641826455043524584, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: buffWeaponIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641826455043524584, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: amountOfAttackDamageBuff
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4669485971228303635, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: m_Name

@@ -11352,6 +11352,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3587450058227074114, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3760390445112464651, guid: 44066a5dc7b154944804c2d92e0150e6, type: 3}
       propertyPath: amountOfAttackRateBuff
       value: 0.05
