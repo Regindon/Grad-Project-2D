@@ -52,7 +52,7 @@ public class ChestRoomUI : MonoBehaviour
 
             //rectTransform.transform.localScale = new Vector3(1.2f, 1.2f, 1f);
             rectTransform.transform.localScale = Vector3.Lerp(rectTransform.transform.localScale,
-                new Vector3(1.2f, 1.2f, 1f), 1 * Time.deltaTime);
+                new Vector3(1.3f, 1.3f, 1f), 1 * Time.deltaTime);
             _canApply = true;
             Debug.Log(_canApply);
 
@@ -73,7 +73,7 @@ public class ChestRoomUI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             rectTransform.transform.localScale = Vector3.Lerp(rectTransform.transform.localScale,
-                new Vector3(1f, 1f, 1f), 1 * Time.deltaTime);
+                new Vector3(.9f, .9f, 1f), 1 * Time.deltaTime);
             _canApply = false;
             Debug.Log(_canApply);
         }
