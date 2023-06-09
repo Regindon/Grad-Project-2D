@@ -105,9 +105,14 @@ public class Enemy : MonoBehaviour
     //enemy destroyed
     private void EnemyDestroyed()
     {
-        DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        
+        StartCoroutine(DeMaterializeEnemy());
+        Debug.Log("Enemydestroyed even ?");
+        //DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
         //CREATING SPRITE FOR BLOOD EFFECT?
-        destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth());
+        //demateralize enemy
+        
+        //destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth());
     }
 
 
@@ -131,7 +136,7 @@ public class Enemy : MonoBehaviour
     
     
     
-    //spreading framerates of ai movement to not get lag spikes
+    //spreading frame rates of ai movement to not get lag spikes
     private void SetEnemyMovementUpdateFrame(int enemySpawnNumber)
     {
         
@@ -163,7 +168,8 @@ public class Enemy : MonoBehaviour
         
         if (enemyDetails.enemyWeapon != null)
         {
-            Weapon weapon = new Weapon() { weaponDetails = enemyDetails.enemyWeapon, weaponReloadTimer = 0f, weaponClipRemainingAmmo = enemyDetails.enemyWeapon.weaponClipAmmoCapacity, weaponRemainingAmmo = enemyDetails.enemyWeapon.weaponAmmoCapacity, isWeaponReloading = false };
+            Weapon weapon = new Weapon() { weaponDetails = enemyDetails.enemyWeapon, weaponReloadTimer = 0f, weaponClipRemainingAmmo 
+                = enemyDetails.enemyWeapon.weaponClipAmmoCapacity, weaponRemainingAmmo = enemyDetails.enemyWeapon.weaponAmmoCapacity, isWeaponReloading = false };
 
             
             setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
@@ -192,6 +198,28 @@ public class Enemy : MonoBehaviour
         EnemyEnable(true);
 
     }
+    
+    private IEnumerator DeMaterializeEnemy()
+    {
+        
+        EnemyEnable(false);
+        
+        StartCoroutine(materializeEffect.DeMaterializeRoutine(enemyDetails.enemyMaterializeShader, enemyDetails.enemyMaterializeColor, 
+            enemyDetails.enemyMaterializeTime, spriteRendererArray, enemyDetails.enemyStandardMaterial));
+        
+        
+        
+        
+        
+
+        yield return new WaitForSeconds(enemyDetails.enemyMaterializeTime-.2f);
+        
+        DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        //CREATING SPRITE FOR BLOOD EFFECT?
+        //demateralize enemy
+        
+        destroyedEvent.CallDestroyedEvent(false, health.GetStartingHealth());
+    }
 
     private void EnemyEnable(bool isEnabled)
     {
@@ -202,6 +230,7 @@ public class Enemy : MonoBehaviour
        
         enemyMovementAI.enabled = isEnabled;
 
+        
         
         fireWeapon.enabled = isEnabled;
 

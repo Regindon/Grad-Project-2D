@@ -107,6 +107,7 @@ public class Player : MonoBehaviour
     {
         //unsubscribe from health events
         healthEvent.OnHealthChanged -= HealthEvent_OnHealthChanged;
+        RestartWeaponBuffs();
     }
 
 

@@ -25,6 +25,43 @@ public class MaterializeEffect : MonoBehaviour
             dissolveAmount += Time.deltaTime / materializeTime;
 
             materializeMaterial.SetFloat("_DissolveAmount", dissolveAmount);
+            
+
+            yield return null;
+
+        }
+
+
+        
+        foreach (SpriteRenderer spriteRenderer in spriteRendererArray)
+        {
+            spriteRenderer.material = normalMaterial;
+        }
+
+    }
+    
+    public IEnumerator DeMaterializeRoutine(Shader materializeShader, Color materializeColor, float materializeTime, SpriteRenderer[] spriteRendererArray, Material normalMaterial)
+    {
+        Material materializeMaterial = new Material(materializeShader);
+
+        materializeMaterial.SetColor("_EmissionColor", materializeColor);
+
+        
+        foreach (SpriteRenderer spriteRenderer in spriteRendererArray)
+        {
+            spriteRenderer.material = materializeMaterial;
+        }
+
+        float dissolveAmount = 1f;
+
+        
+        while (dissolveAmount > 0f)
+        {
+            dissolveAmount -= Time.deltaTime / materializeTime;
+
+            
+            materializeMaterial.SetFloat("_DissolveAmount", dissolveAmount);
+            
 
             yield return null;
 

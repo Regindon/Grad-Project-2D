@@ -70,7 +70,7 @@ public class HealthUI : MonoBehaviour
         */
         
         float healthBarAmount = healthEventArgs.healthPercent;
-        Debug.Log(healthBarAmount);
+        //Debug.Log(healthBarAmount);
         healthBar.transform.localScale = new Vector3(healthBarAmount, 1f,1f);
 
     }
