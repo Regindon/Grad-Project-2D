@@ -198,7 +198,7 @@ public class WeaponStatusUI : MonoBehaviour
             //instantiate ammo icon prefab
             GameObject ammoIcon = Instantiate(GameResources.Instance.ammoIconPrefab, ammoHolderTransform);
 
-            ammoIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, Settings.uiAmmoIconSpacing * i);
+            ammoIcon.GetComponent<RectTransform>().anchoredPosition = new Vector2(Settings.uiAmmoIconSpacing * i,0f );
 
             ammoIconList.Add(ammoIcon);
         }
