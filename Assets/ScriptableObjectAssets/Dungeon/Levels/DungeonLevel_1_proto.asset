@@ -15,7 +15,6 @@ MonoBehaviour:
   levelName: Prototype Level
   roomTemplateList:
   - {fileID: 11400000, guid: c6f671b48a6efb14ca2eb7c3fdc71a4c, type: 2}
-  - {fileID: 11400000, guid: 56dd98ab73169a245b5b635de259a847, type: 2}
   - {fileID: 11400000, guid: 2d09df065eeb7d54bace8e8287f6bf6c, type: 2}
   - {fileID: 11400000, guid: dfb7224f49857464f8dc36c6afa318e4, type: 2}
   - {fileID: 11400000, guid: b7c1d791252b4b244893cf24db63d4f9, type: 2}
