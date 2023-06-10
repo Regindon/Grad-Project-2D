@@ -47,6 +47,7 @@ MonoBehaviour:
   roomNodeTypeList: {fileID: 11400000, guid: c11f41db2019ea942b36107f3a011131, type: 2}
   currentPlayer: {fileID: 11400000, guid: 769eaac2c6d1e3a4abdefa852c7baebb, type: 2}
   musicMasterMixerGroup: {fileID: -7206380732494497733, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  mainMenuMusic: {fileID: 11400000, guid: a2802cba65c6afe4b966d48541e1e3d4, type: 2}
   musicOnFullSnapshot: {fileID: 24500006, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicLowSnapshot: {fileID: 8893122114324796974, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   musicOffSnapshot: {fileID: -3084740370723268673, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}

@@ -24,8 +24,25 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
 
     private void Start()
     {
+        
+        //check if volume save exist and get it afterwards
+        if (PlayerPrefs.HasKey("musicVolume"))
+        {
+            musicVolume = PlayerPrefs.GetInt("musicVolume");
+        }
+        
         SetMusicVolume(musicVolume);
     }
+    
+    
+    private void OnDisable()
+    {
+        //save music volume
+        PlayerPrefs.SetInt("musicVolume", musicVolume);
+    }
+    
+    
+    
 
     public void PlayMusic(MusicTrackSO musicTrack, float fadeOutTime = Settings.musicFadeOutTime, float fadeInTime = Settings.musicFadeInTime)
     {
@@ -86,6 +103,31 @@ public class MusicManager : SingletonMonobehaviour<MusicManager>
         yield return new WaitForSeconds(fadeInTime);
     }
 
+    
+    
+    //Increase music volume
+    public void IncreaseMusicVolume()
+    {
+        int maxMusicVolume = 20;
+
+        if (musicVolume >= maxMusicVolume) return;
+
+        musicVolume += 1;
+
+        SetMusicVolume(musicVolume);
+    }
+
+
+    //Decrease music volume
+    public void DecreaseMusicVolume()
+    {
+        if (musicVolume == 0) return;
+
+        musicVolume -= 1;
+
+        SetMusicVolume(musicVolume);
+    }
+    
 
     //set music volume
     public void SetMusicVolume(int musicVolume)

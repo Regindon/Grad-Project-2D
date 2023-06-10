@@ -16,6 +16,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Space(10)]
     [Header("GAMEOBJECT REFERENCES")]
     #endregion Header GAMEOBJECT REFERENCES
+    
+    #region Tooltip
+
+    [Tooltip("Populate with pause menu gameobject in hierarchy")]
+
+    #endregion Tooltip
+
+    [SerializeField] private GameObject pauseMenu;
 
     #region Tooltip
     [Tooltip("Populate with the MessageText textmeshpro component in the FadeScreenUI")]
@@ -169,10 +177,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             gameState = GameState.gameStarted;
         }
 
+        
+        /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
         }
+        */
         
         //Debug.Log(gameState);
         
@@ -196,6 +207,48 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
                 break;
 
+            case GameState.playingLevel:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                break;
+            
+            
+            //while engaging enemies handle the escape key for the pause menu
+            case GameState.engagingEnemies:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                break;
+            
+            
+            //while playing the level and before the boss is engaged
+            case GameState.bossStage:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                break;
+            
+            
+            //While engaging the boss handle the escape key for the pause menu
+            case GameState.engagingBoss:
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+
+                break;
+            
+            
             //handle the level being completed
             case GameState.levelCompleted:
 
@@ -228,6 +281,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
                 RestartGame();
 
+                break;
+            
+            // if the game is paused and the pause menu showing, then pressing escape again will clear the pause menu
+            case GameState.gamePaused:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
                 break;
 
         }
@@ -295,6 +356,31 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     }
 
+    
+    //pause game menu - also called from resume game button on pause menu
+    public void PauseGameMenu()
+    {
+        if (gameState != GameState.gamePaused)
+        {
+            pauseMenu.SetActive(true);
+            GetPlayer().playerControl.DisablePlayer();
+
+            // Set game state
+            previousGameState = gameState;
+            gameState = GameState.gamePaused;
+        }
+        else if (gameState == GameState.gamePaused)
+        {
+            pauseMenu.SetActive(false);
+            GetPlayer().playerControl.EnablePlayer();
+
+            // Set game state
+            gameState = previousGameState;
+            previousGameState = GameState.gamePaused;
+
+        }
+    }
+    
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
@@ -403,9 +489,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         
         yield return StartCoroutine(Fade(0f, 1f, 2f, new Color(0f, 0f, 0f, 0.4f)));
         
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE \n\nYOU'VE SURVIVED THIS DUNGEON LEVEL", Color.white, 5f));
+        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE \n\nYOU SURVIVED THIS DUNGEON LEVEL", Color.white, 5f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN\n\nTO DESCEND FURTHER INTO THE DUNGEON", Color.white, 5f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN\n\nTO GO FURTHER INTO THE DUNGEON", Color.white, 5f));
         
         yield return StartCoroutine(Fade(1f, 0f, 2f, new Color(0f, 0f, 0f, 0.4f)));
         
@@ -447,11 +533,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         
-        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE YOU HAVE DEFEATED THE DUNGEON", Color.white, 3f));
+        yield return StartCoroutine(DisplayMessageRoutine("WELL DONE YOU WON " + GameResources.Instance.currentPlayer.playerName, Color.white, 3f));
 
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0"), Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO GO BACK TO MAIN MENU", Color.white, 0f));
 
         //set game state to restart game
         gameState = GameState.restartGame;
@@ -476,11 +562,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             enemy.gameObject.SetActive(false);
         }
         
-        yield return StartCoroutine(DisplayMessageRoutine("BAD LUCK YOU HAVE SUCCUMBED TO THE DUNGEON", Color.white, 2f));
+        yield return StartCoroutine(DisplayMessageRoutine("BAD LUCK YOU LOST " + GameResources.Instance.currentPlayer.playerName, Color.white, 2f));
 
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0"), Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO RESTART THE GAME", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO GO BACK TO MAIN MENU", Color.white, 0f));
 
         // Set game state to restart game
         gameState = GameState.restartGame;
@@ -490,7 +576,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     //restart the game
     private void RestartGame()
     {
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("MainMenuV2");
     }
     
     
@@ -511,6 +597,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         return dungeonLevelList[currentDungeonLevelListIndex];
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenuV2");
+    }
+
 
     #region Validation
 
@@ -518,6 +609,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     private void OnValidate()
     {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(pauseMenu), pauseMenu);
         HelperUtilities.ValidateCheckNullValue(this, nameof(messageTextTMP), messageTextTMP);
         HelperUtilities.ValidateCheckNullValue(this, nameof(canvasGroup), canvasGroup);
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(dungeonLevelList), dungeonLevelList);
