@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileDamage: 10
-  immunityTime: 0.5
+  immunityTime: 0.3
 --- !u!212 &1529781112011066027
 SpriteRenderer:
   m_ObjectHideFlags: 0
