@@ -54,6 +54,7 @@ public class MaterializeEffect : MonoBehaviour
 
         float dissolveAmount = 1f;
 
+        //materializeTime -= .3f;
         
         while (dissolveAmount > 0f)
         {
