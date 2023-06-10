@@ -177,7 +177,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             gameState = GameState.gameStarted;
         }
 
-        
+        /*
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            gameState = GameState.gameWon;
+        }
+        */
         /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -537,10 +542,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
         yield return StartCoroutine(DisplayMessageRoutine("YOU SCORED " + gameScore.ToString("###,###0"), Color.white, 4f));
 
-        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO GO BACK TO MAIN MENU", Color.white, 0f));
+        yield return StartCoroutine(DisplayMessageRoutine("PRESS ENTER/RETURN TO CONTINUE", Color.white, 0f));
 
         //set game state to restart game
-        gameState = GameState.restartGame;
+        //gameState = GameState.restartGame;
+        SceneManager.LoadScene("EndCinematicScene");
     }
 
     

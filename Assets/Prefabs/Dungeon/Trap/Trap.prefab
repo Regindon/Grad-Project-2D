@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionIndex: 2
   shootInterval: 2
-  projectileSpeed: 5
+  projectileSpeed: 8
   projectilePrefab: {fileID: 2395884591228925508, guid: 736e137c2665ecd489c2109ab45b3533, type: 3}
