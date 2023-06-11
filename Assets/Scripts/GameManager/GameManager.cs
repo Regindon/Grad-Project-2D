@@ -180,9 +180,19 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         
         if (Input.GetKeyDown(KeyCode.V))
         {
-            gameState = GameState.gameWon;
+            Enemy[] enemyArray = GameObject.FindObjectsOfType<Enemy>();
+            foreach (Enemy enemy in enemyArray)
+            {
+                enemy.gameObject.SetActive(false);
+            }
+
+            gameState = GameState.bossStage;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            gameState = GameState.levelCompleted;
+        }
         /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
