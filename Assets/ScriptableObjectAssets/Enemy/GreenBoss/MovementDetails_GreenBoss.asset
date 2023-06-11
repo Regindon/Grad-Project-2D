@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaf1d4cf6f69e0438c525e2e4c15414, type: 3}
   m_Name: MovementDetails_GreenBoss
   m_EditorClassIdentifier: 
-  minMoveSpeed: 4
-  maxMoveSpeed: 5
+  minMoveSpeed: 5
+  maxMoveSpeed: 6
   rollSpeed: 0
   rollDistance: 0
   rollCooldownTime: 0

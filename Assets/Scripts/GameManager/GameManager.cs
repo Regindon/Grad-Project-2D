@@ -177,12 +177,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             gameState = GameState.gameStarted;
         }
 
-        /*
+        
         if (Input.GetKeyDown(KeyCode.V))
         {
             gameState = GameState.gameWon;
         }
-        */
+        
         /*
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -533,8 +533,35 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private IEnumerator GameWon()
     {
         previousGameState = GameState.gameWon;
-        
+
         GetPlayer().playerControl.DisablePlayer();
+        
+        
+        int rank = HighScoreManager.Instance.GetRank(gameScore);
+        
+        // Test if the score is in the rankings
+        if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
+        {
+            
+
+            string name = GameResources.Instance.currentPlayer.playerName;
+
+            if (name == "")
+            {
+                name = playerDetails.playerCharacterName.ToUpper();
+            }
+
+            // Update scores
+            HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + 
+                (currentDungeonLevelListIndex + 1).ToString() , playerScore = gameScore }, rank);
+
+
+        }
+        
+
+        // Wait 1 seconds
+        yield return new WaitForSeconds(1f);
+        
         
         yield return StartCoroutine(Fade(0f, 1f, 2f, Color.black));
         
@@ -556,6 +583,29 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         previousGameState = GameState.gameLost;
         
         GetPlayer().playerControl.DisablePlayer();
+        
+        
+        int rank = HighScoreManager.Instance.GetRank(gameScore);
+        
+        // Test if the score is in the rankings
+        if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
+        {
+            
+
+            string name = GameResources.Instance.currentPlayer.playerName;
+
+            if (name == "")
+            {
+                name = playerDetails.playerCharacterName.ToUpper();
+            }
+
+            // Update scores
+            HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + 
+                (currentDungeonLevelListIndex + 1).ToString() , playerScore = gameScore }, rank);
+
+        }
+        
+        
         
         yield return new WaitForSeconds(1f);
         

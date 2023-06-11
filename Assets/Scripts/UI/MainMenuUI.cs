@@ -28,6 +28,11 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("MainMenuV2");
     }
 
+    public void OpenHighScores()
+    {
+        SceneManager.LoadScene("HighScoreScene");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
