@@ -6,18 +6,41 @@
   <component name="ChangeListManager">
     <list default="true" id="465a5b50-6f83-4cb7-9f4d-fc022ed1a15c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grad-Project-2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level2/BossRoom_Level2_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level3/BossRoom_Level3_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level3/BossRoom_Level3_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level3/BossRoom_Level3_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level3/BossRoom_Level3_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Level4/BossRoom_Level4_3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Trap/Trap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Trap/Trap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Trap/TrapProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Trap/TrapProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameResources/Resources/GameResources.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameResources/Resources/GameResources.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenuV2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuV2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/GunBoss/EnemyDetails_GunBoss_Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/GunBoss/EnemyDetails_GunBoss_Shotgun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/MaskBoss/EnemyDetails_MaskBoss_Pistol.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/MaskBoss/EnemyDetails_MaskBoss_Pistol.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/Military_SoldierBoss/EnemyDetails_Military_SoldierBoss_Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/Military_SoldierBoss/EnemyDetails_Military_SoldierBoss_Shotgun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/Soviet_SoldierBoss/EnemyDetails_Soviet_SoldierBoss_AK47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/Soviet_SoldierBoss/EnemyDetails_Soviet_SoldierBoss_AK47.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/SwatBoss/EnemyDetails_SwatBoss_AK47.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/SwatBoss/EnemyDetails_SwatBoss_AK47.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/ZombieBoss/EnemyDetails_ZombieBoss_Shotgun.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Bosses/ZombieBoss/EnemyDetails_ZombieBoss_Shotgun.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_LargeRoom_Level1_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Level1/Room_MediumRoom_Level1_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingEyeBoss/EnemyDetails_FlyingEyeBoss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingEyeBoss/EnemyDetails_FlyingEyeBoss.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Blue/EnemyDetails_FlyingMelee_Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Blue/EnemyDetails_FlyingMelee_Blue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Green/EnemyDetails_FlyingMelee_Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Green/EnemyDetails_FlyingMelee_Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Red/EnemyDetails_FlyingMelee_Red.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingMelee/Red/EnemyDetails_FlyingMelee_Red.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Blue/EnemyDetails_FlyingSmall_Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Blue/EnemyDetails_FlyingSmall_Blue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Blue/MovementDetails_FlyingSmall_Blue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Blue/MovementDetails_FlyingSmall_Blue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Green/EnemyDetails_FlyingSmall_Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Green/EnemyDetails_FlyingSmall_Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Green/MovementDetails_FlyingSmall_Green.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Green/MovementDetails_FlyingSmall_Green.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Red/EnemyDetails_FlyingSmall_Red.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/FlyingSmall/Red/EnemyDetails_FlyingSmall_Red.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/GreenBoss/EnemyDetails_GreenBoss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/GreenBoss/EnemyDetails_GreenBoss.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/GreenBoss/MovementDetails_GreenBoss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Enemy/GreenBoss/MovementDetails_GreenBoss.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheSoldier.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheSoldier.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Enemy/AK47 Boss/AmmoDetails_AK47_Boss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Enemy/AK47 Boss/AmmoDetails_AK47_Boss.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Enemy/Shotgun Boss/AmmoDetails_Shotgun_Boss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Weapons/Enemy/Shotgun Boss/AmmoDetails_Shotgun_Boss.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,6 +106,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChestRoomUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ChooseNameUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DisplayHighScoresUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HealthUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainMenuUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ScoreUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -287,7 +311,7 @@
       <workItem from="1686191009928" duration="688000" />
       <workItem from="1686263264826" duration="8646000" />
       <workItem from="1686335860027" duration="18587000" />
-      <workItem from="1686415343148" duration="4460000" />
+      <workItem from="1686415343148" duration="10961000" />
     </task>
     <servers />
   </component>

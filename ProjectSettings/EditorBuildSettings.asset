@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndCinematicScene.unity
     guid: 06b8324cbdadbcc4d9450b59751b74c5
+  - enabled: 1
+    path: Assets/Scenes/HighScoreScene.unity
+    guid: bc60da1d02caf6546aee5cb3b8160891
   m_configObjects: {}

@@ -23,7 +23,7 @@ MonoBehaviour:
   firingIntervalMin: 2
   firingIntervalMax: 4
   firingDurationMin: 4
-  firingDurationMax: 6
+  firingDurationMax: 5
   firingLineOfSightRequired: 1
   enemyHealthDetailsArray:
   - dungeonLevel: {fileID: 11400000, guid: eac798660bc3e8d468cdac8591465115, type: 2}
