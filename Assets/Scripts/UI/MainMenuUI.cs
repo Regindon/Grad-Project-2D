@@ -33,6 +33,11 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("HighScoreScene");
     }
 
+    public void OpenStartCinematic()
+    {
+        SceneManager.LoadScene("StartCinematicScene");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

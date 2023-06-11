@@ -28,7 +28,7 @@ public class VideoPlayerManager : MonoBehaviour
 
         if (canChange && !vp.isPlaying)
         {
-            if(currentSceneIndex ==2) SceneManager.LoadScene("MainGameScene");
+            if(currentSceneIndex ==3) SceneManager.LoadScene("MainGameScene");
             else
             {
                 SceneManager.LoadScene("MainMenuV2");
@@ -39,7 +39,7 @@ public class VideoPlayerManager : MonoBehaviour
         {
             
             
-            if(currentSceneIndex ==2) SceneManager.LoadScene("MainGameScene");
+            if(currentSceneIndex ==3) SceneManager.LoadScene("MainGameScene");
             else
             {
                 SceneManager.LoadScene("MainMenuV2");

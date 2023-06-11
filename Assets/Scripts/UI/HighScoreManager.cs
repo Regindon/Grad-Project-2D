@@ -25,6 +25,7 @@ public class HighScoreManager : SingletonMonobehaviour<HighScoreManager>
             ClearScoreList();
 
             FileStream file = File.OpenRead(Application.persistentDataPath + "/GameHighScores.dat");
+            Debug.Log(Application.persistentDataPath);
 
             highScores = (HighScores)bf.Deserialize(file);
 
